@@ -1,22 +1,21 @@
 {
     "vcenter": [
-        {
-			"fqdn": "sfo-m01-vc01.sfo.rainpole.io",
-            "username": "administrator@vsphere.local",
-            "password":"<password>",
-            "clusterName":"sfo-m01-cl01"
+		{
+		"fqdn": "<replace with vCenter FQDN>",
+		"username": "<replace with vCenter username>",
+		"password":"<replace with vCenter user password>",
+		"clusterName":"<replace with vCenter cluster name>"
         }
     ],
     "nsxManager":[
-        
-        {
-            "fqdn": "sfo-m01-nsx01.sfo.rainpole.io",
-            "username": "admin",
-            "password":"<password>"
+		{
+		"fqdn": "<replace with NSX FQDN>",
+		"username": "<replace with NSX username>",
+        "password":"<replace with NSX user password>"
         }
     ],
     "Output": [
-        {"fileName": "Export-VM_tags.csv"},
-        {"fileFormat": "csv"}
+		{"fileName": "<replace with output file name>"},
+		{"fileFormat": "<replace with csv or json>"}
     ]
 }
