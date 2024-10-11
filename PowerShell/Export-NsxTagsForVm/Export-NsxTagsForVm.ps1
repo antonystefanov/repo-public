@@ -1,5 +1,6 @@
 # version 0.9
 # date: 2024.10.09
+# Developed by Antony Stefanov (Antony.Stefanov@broadcom.com)
 #
 # PowerShell script that exports NSX tags assigned to VM in json and csv format
 # Required Powershel modules:
