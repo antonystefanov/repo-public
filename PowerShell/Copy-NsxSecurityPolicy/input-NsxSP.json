@@ -1,0 +1,32 @@
+{
+    "source": [
+        
+        {
+            "type": "nsxManager",
+            "fqdn": "sfo-m01-nsx01.sfo.rainpole.io",
+            "username": "admin",
+            "password": "01000000d08c9ddf0115d1118c7a00c04fc297eb01000000acbf2e03f06bbc49a3ec561711de899d000000000200000000001066000000010000200000000e02e49d7f64dbaa464831352f064f52d75d325c7495e1861662718a2a15442f000000000e8000000002000020000000d689b43ba953ecafab28f1ec150f5ff514f033debfc55d2e18cb6123ccc854c73000000056025e4ede9692e79bc322f9c83739f61fa3950c8c89e63ce27f16fb07821fbcd5d05684223034eaf8c9a49fc757760e40000000cf6c2717a7ba89c8f52e6722dc4f60035442acf19383ff0a758a14c86e4d36d22b2a110399baa6f9a225a7b56d5e9812c0d0030d93031a29d0793a174d02c9e1"
+        }
+        
+    ],
+    "destination":[
+
+        {
+            "type": "nsxManager",
+            "fqdn": "sfo-w01-nsx01.sfo.rainpole.io",
+            "username": "admin",
+            "password": "01000000d08c9ddf0115d1118c7a00c04fc297eb01000000acbf2e03f06bbc49a3ec561711de899d000000000200000000001066000000010000200000000e02e49d7f64dbaa464831352f064f52d75d325c7495e1861662718a2a15442f000000000e8000000002000020000000d689b43ba953ecafab28f1ec150f5ff514f033debfc55d2e18cb6123ccc854c73000000056025e4ede9692e79bc322f9c83739f61fa3950c8c89e63ce27f16fb07821fbcd5d05684223034eaf8c9a49fc757760e40000000cf6c2717a7ba89c8f52e6722dc4f60035442acf19383ff0a758a14c86e4d36d22b2a110399baa6f9a225a7b56d5e9812c0d0030d93031a29d0793a174d02c9e1"
+        }
+    ],
+    "NSXSecurityPolicy": [
+        {
+            "name": "CompanySP"
+        }
+    ],
+    "skipOnDestination":
+        {
+            "NSXGroup":[
+                {"name":"LocalServers"}
+            ]
+        }
+}

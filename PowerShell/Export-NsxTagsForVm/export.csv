@@ -1,0 +1,5 @@
+"Vcenter","Cluster","NsxManager","VMname","VMid","tags_scope","tags_tag"
+"sfo-m01-vc01.sfo.rainpole.io","testCluster","sfo-m01-nsx01.sfo.rainpole.io","TestVM-01","500cac27-1f97-cc3a-c068-96bcabbdebd5","","red-tag"
+"sfo-m01-vc01.sfo.rainpole.io","testCluster","sfo-m01-nsx01.sfo.rainpole.io","TestVM-01","500cac27-1f97-cc3a-c068-96bcabbdebd5","","green-tag"
+"sfo-m01-vc01.sfo.rainpole.io","testCluster","sfo-m01-nsx01.sfo.rainpole.io","sfo-m01-r01-en02","500c6e47-63cf-fd4c-e1a0-5f98597ebd52","","Edge_NSGroup"
+"sfo-m01-vc01.sfo.rainpole.io","testCluster","sfo-m01-nsx01.sfo.rainpole.io","sfo-m01-r01-en01","500c18c6-df90-0d80-a6ac-f53cee6d6281","","Edge_NSGroup"

@@ -35,7 +35,7 @@ Dependency
 #
 <# Example command:
 
- Copy-NsxSP.ps1 -$inputJsonFilePath "C:\work\input.json"
+ Copy-NsxSP.ps1 -inputJsonFilePath "C:\work\input.json"
 
 #>
 
@@ -126,7 +126,7 @@ Read-Host -AsSecureString | ConvertFrom-SecureString
 
 # Main script parameters
 param (
-    [Parameter (Mandatory = $false)] [String]$inputJsonFilePath  = "input-NsxSP-arkhFed.json"
+    [Parameter (Mandatory = $false)] [String]$inputJsonFilePath  = "input-NsxSP.json"
 )
 
 Function checkingRequireModules {
@@ -249,7 +249,7 @@ function Get-NsxtSecurityPolicy {
     Try {
         $requestingURL = "https://$nsxtmanager/policy/api/v1/infra/domains/default/security-policies/" + $policyId
         Write-LogMessage -type INFO -Message "Getting from $requestingURL"
-        $response = Invoke-RestMethod -Method GET -URI $requestingURL -ContentType application/json -headers $nsxtHeaders # -SkipCertificateCheck
+        $response = Invoke-RestMethod -Method GET -URI $requestingURL -ContentType application/json -headers $nsxtHeaders  -SkipCertificateCheck
         $response
     }
     Catch {
