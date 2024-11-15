@@ -805,8 +805,8 @@ Foreach ($policyName in $inputParam.NSXSecurityPolicy.name) {
                         $destPolicyName = $securityPolicy.id
                         $destPolicyDisplayName = $securityPolicy.display_name
                         $destPolicyCategory = $securityPolicy.category
-                        $destPolicyRules = $securityPolicy.rules | ConvertTo-Json
-
+                        $destPolicyRules = $securityPolicy.rules | ConvertTo-Json -Depth 10
+                        #Write-LogMessage -type INFO -Message "Destination policy rules JSON: $destPolicyRules "
                         Write-LogMessage -type INFO -Message "Patching security policy: $destPolicyName in server: $nsxtmanager"
                         try {
                             New-NsxtSecurityPolicy -name $destPolicyName -displayName $destPolicyDisplayName -category $destPolicyCategory -rulesJson $destPolicyRules

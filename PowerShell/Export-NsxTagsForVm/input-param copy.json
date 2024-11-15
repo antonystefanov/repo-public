@@ -1,18 +1,17 @@
 {
     "vcenter": [
 		{
-		"fqdn": "sfo-m01-vc01.sfo.rainpole.io",
+		"fqdn": "sfo-w01-vc01.sfo.rainpole.io",
 		"username": "administrator@vsphere.local",
 		"password":"VMw@re1!",
 		"clusters": [
-			{"clusterName":"sfo-m01-cl01"},
-			{"clusterName":"testCluster"}
+			{"clusterName":"sfo-w01-cl01"}
 		]
         }
     ],
     "nsxManager":[
 		{
-		"fqdn": "sfo-m01-nsx01.sfo.rainpole.io",
+		"fqdn": "sfo-w01-nsx01.sfo.rainpole.io",
 		"username": "admin",
         "password":"VMw@re1!VMw@re1!"
         }

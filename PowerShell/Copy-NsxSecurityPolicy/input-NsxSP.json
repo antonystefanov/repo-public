@@ -20,7 +20,7 @@
     ],
     "NSXSecurityPolicy": [
         {
-            "name": "CompanySP"
+            "name": "Policy-01"
         }
     ],
     "skipOnDestination":
