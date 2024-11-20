@@ -539,7 +539,7 @@ Write-LogMessage -Type INFO -Message "Setting up the log file to path $logfile" 
 
 # Checking if input json file exists
 if (Test-Path $inputJsonFilePath) {
-    $inputParam = Get-Content -Path $inputJsonFilePath -Raw | ConvertFrom-Json
+    $inputParam = Get-Content -Path $inputJsonFilePath -Raw | ConvertFrom-Json -Depth 10
 }
 else {
     Write-LogMessage -Type ERROR -Message $inputJsonFilePath + " file not found." -Colour Red
@@ -613,8 +613,8 @@ Foreach ($policyName in $inputParam.NSXSecurityPolicy.name) {
                     $destinationGroups = @()
                     $groups = @()
 
-                    $sourceGroups = @($securityPolicy.rules.source_groups | Where-Object {$_ -ne "ANY"}  | Split-Path -Leaf)
-                    $destinationGroups = @($securityPolicy.rules.destination_groups | Where-Object {$_ -ne "ANY"} | Split-Path -Leaf)
+                    $sourceGroups = @($securityPolicy.rules.source_groups | Where-Object {$_ -ne "ANY" -and $_ -like "/infra/domains/default/groups/*" }  | Split-Path -Leaf)
+                    $destinationGroups = @($securityPolicy.rules.destination_groups | Where-Object {$_ -ne "ANY" -and $_ -like "/infra/domains/default/groups/*"} | Split-Path -Leaf)
                     $groups = $sourceGroups + $destinationGroups | Select-Object -Unique
                     Write-LogMessage -type INFO -Message "Unique groups to proceed: $groups " -Colour yellow
                             

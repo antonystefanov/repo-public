@@ -21,6 +21,7 @@
     "NSXSecurityPolicy": [
         {
             "name": "Policy-01"
+            
         }
     ],
     "skipOnDestination":
