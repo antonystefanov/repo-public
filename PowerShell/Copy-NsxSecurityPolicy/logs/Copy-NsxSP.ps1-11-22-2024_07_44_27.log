@@ -1,0 +1,23 @@
+[11-22-2024_07_44_27] Beginning of Log File
+[11-22-2024_07:44:27] INFO Setting up the log file to path C:\Users\Administrator\github\repo-public\PowerShell\Copy-NsxSecurityPolicy\logs\Copy-NsxSP.ps1-11-22-2024_07_44_27.log
+[11-22-2024_07:44:27] INFO Start processing policy: Policy-01
+[11-22-2024_07:44:27] INFO Reading source sfo-m01-nsx01.sfo.rainpole.io
+[11-22-2024_07:44:27] INFO Testing Connection to sfo-m01-nsx01.sfo.rainpole.io on port 443
+[11-22-2024_07:44:28] INFO Testing NSXT Authentication to sfo-m01-nsx01.sfo.rainpole.io
+[11-22-2024_07:44:29] INFO Getting NSXT security policy Policy-01 from sfo-m01-nsx01.sfo.rainpole.io
+[11-22-2024_07:44:29] INFO Getting from https://sfo-m01-nsx01.sfo.rainpole.io/policy/api/v1/infra/domains/default/security-policies/Policy-01
+[11-22-2024_07:44:29] INFO Getting from https://sfo-m01-nsx01.sfo.rainpole.io/policy/api/v1/infra/domains/default/security-policies/Policy-01
+[11-22-2024_07:44:29] INFO Found NSXT security policy 
+id:Policy-01 
+display_name:Policy-01 
+rules: 
+raw policy:@{rules=System.Object[]; logging_enabled=False; target_type=DFW; resource_type=SecurityPolicy; id=Policy-01; display_name=Policy-01; path=/infra/domains/default/security-policies/Policy-01; relative_path=Policy-01; parent_path=/infra/domains/default; remote_path=; unique_id=bb53d09e-3fe2-4b64-acab-c73c6cb522e6; realization_id=bb53d09e-3fe2-4b64-acab-c73c6cb522e6; owner_id=1150a37a-5c13-4702-ab0b-f05423785b13; marked_for_delete=False; overridden=False; sequence_number=10; internal_sequence_number=60000010; category=Application; stateful=True; tcp_strict=True; locked=False; lock_modified_time=0; scope=System.Object[]; rule_count=0; is_default=False; _system_owned=False; _protection=NOT_PROTECTED; _create_time=1731598285646; _create_user=admin; _last_modified_time=1731598285770; _last_modified_user=admin; _revision=1} in server:sfo-m01-nsx01.sfo.rainpole.io
+[11-22-2024_07:44:29] INFO Unique groups to proceed:  
+[11-22-2024_07:44:31] INFO Found NSserviceGroups: 
+[11-22-2024_07:44:31] INFO Processing destination sfo-w01-nsx01.sfo.rainpole.io
+[11-22-2024_07:44:31] INFO Testing NSXT Connection to server sfo-w01-nsx01.sfo.rainpole.io
+[11-22-2024_07:44:32] INFO Testing NSXT Authentication to server sfo-w01-nsx01.sfo.rainpole.io
+[11-22-2024_07:44:32] INFO Patching security policy: Policy-01 in server: sfo-w01-nsx01.sfo.rainpole.io
+[11-22-2024_07:45:15]   Error at Script Line 830
+[11-22-2024_07:45:15]   Relevant Command: New-NsxtSecurityPolicy -name $destPolicyName -displayName $destPolicyDisplayName -category $destPolicyCategory -rulesJson $destPolicyRules -rulesCount $securityPolicy.rules.Count
+[11-22-2024_07:45:15]   Error Message: Cannot bind argument to parameter 'rulesJson' because it is null.

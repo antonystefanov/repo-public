@@ -263,9 +263,23 @@ function New-NsxtSecurityPolicy {
         [Parameter (Mandatory = $true)] [String]$name,
         [Parameter (Mandatory = $true)] [String]$displayName,
         [Parameter (Mandatory = $true)] [String]$category,
-        [Parameter (Mandatory = $true)] $rulesJson
+        [Parameter (Mandatory = $true)] $rulesJson,
+        [Parameter (Mandatory = $true)] [int32]$rulesCount
     )
+    
+    if ($rulesCount -eq 1) {
     $json = @"
+{
+    "description": "$name",
+    "display_name": "$displayName",
+    "category": "$category",
+    "rules": [
+        $rulesJson
+    ]
+}
+"@
+    } else {
+        $json = @"
 {
     "description": "$name",
     "display_name": "$displayName",
@@ -273,7 +287,8 @@ function New-NsxtSecurityPolicy {
     "rules": 
         $rulesJson
 }
-"@
+"@        
+    }
     $policyId = $name.replace(" ", "_")
     Try {
         $requestingURL = "https://$nsxtmanager/policy/api/v1/infra/domains/default/security-policies/" + $policyId
@@ -282,6 +297,7 @@ function New-NsxtSecurityPolicy {
         $response
     }
     Catch {
+
         Write-Error $_.Exception.Message
     }
     
@@ -539,7 +555,7 @@ Write-LogMessage -Type INFO -Message "Setting up the log file to path $logfile" 
 
 # Checking if input json file exists
 if (Test-Path $inputJsonFilePath) {
-    $inputParam = Get-Content -Path $inputJsonFilePath -Raw | ConvertFrom-Json -Depth 10
+    $inputParam = Get-Content -Path $inputJsonFilePath -Raw | ConvertFrom-Json
 }
 else {
     Write-LogMessage -Type ERROR -Message $inputJsonFilePath + " file not found." -Colour Red
@@ -684,7 +700,8 @@ Foreach ($policyName in $inputParam.NSXSecurityPolicy.name) {
     }
 
     
-    if (($destinationNsxtGroups.Count -gt 0) -and ($foundErrors -eq 0) ) {
+    #if (($destinationNsxtGroups.Count -gt 0) -and ($foundErrors -eq 0) ) {
+    if (($foundErrors -eq 0) ) {
         # Processing each of the Destinations 
         foreach ($destinationObject in $inputParam.destination) {
             Write-LogMessage -type INFO -Message "Processing destination $($destinationObject.fqdn)" -Colour yellow
@@ -735,51 +752,52 @@ Foreach ($policyName in $inputParam.NSXSecurityPolicy.name) {
                     Write-LogMessage -type INFO -Message "Testing NSXT Authentication to server $nsxFqdn"
                     if (Test-NSXTAuthentication -server $nsxFqdn -user $nsxAdminUser -pass $nsxAdminPass) {
                         
-                        Write-LogMessage -type INFO -Message "Searching for Services: ($($customNSserviceGroups.display_name)) in destination" -Colour yellow
+                        if ($customNSserviceGroups.Count -gt 0) {
+                            Write-LogMessage -type INFO -Message "Searching for Custom Services: ($($customNSserviceGroups.display_name)) in destination" -Colour yellow
                         
-                        # NSXservices
-                        $DstNSXServicesResults = Get-AllNSXservices
+                            # NSXservices
+                            $DstNSXServicesResults = Get-AllNSXservices
 
-                        $ServiceDiff = Compare-Object -ReferenceObject $SrcNSXServicesResults -DifferenceObject $DstNSXServicesResults -Property id | Select-Object -ExpandProperty id
-                        $ServicesToAdd = $SrcNSXServicesResults | Where-Object id -in $ServiceDiff
+                            $ServiceDiff = Compare-Object -ReferenceObject $SrcNSXServicesResults -DifferenceObject $DstNSXServicesResults -Property id | Select-Object -ExpandProperty id
+                            $ServicesToAdd = $SrcNSXServicesResults | Where-Object id -in $ServiceDiff
 
-                        Write-LogMessage -type INFO -Message "Services to add in destination $ServicesToAdd"
-                        if (!($null -eq $ServicesToAdd)) {
-                            Add-NSService -ServicesToAdd $ServicesToAdd
-                        }
-                        Write-LogMessage -type INFO -Message "Sleeping for 5 sec"
-                        Start-Sleep -Seconds 5
+                            Write-LogMessage -type INFO -Message "Services to add in destination $ServicesToAdd"
+                            if (!($null -eq $ServicesToAdd)) {
+                                Add-NSService -ServicesToAdd $ServicesToAdd
+                            }
+                            Write-LogMessage -type INFO -Message "Sleeping for 5 sec"
+                            Start-Sleep -Seconds 5
 
-                        foreach ($NSsvc in $customNSserviceGroups.display_name ) {
-                            try {
+                            foreach ($NSsvc in $customNSserviceGroups.display_name ) {
+                                try {
 
-                                # Search for $NSsvc in NSServiceGroups
-                                $NSserviceGroupFound = $false
-                                $destServiceGroup = Get-NSserviceGroup -NSserviceGroupName $NSsvc
-                                if ($destServiceGroup) {
-                                    $NSserviceGroupFound = $true
-                                } 
-                                
-                                # Search for $NSsvc in NSServices
-                                $NSserviceFound = $false
-                                $destService = Get-NSservice -NSserviceName $NSsvc
-                                if ($destService) {
-                                    $NSserviceFound = $true
+                                    # Search for $NSsvc in NSServiceGroups
+                                    $NSserviceGroupFound = $false
+                                    $destServiceGroup = Get-NSserviceGroup -NSserviceGroupName $NSsvc
+                                    if ($destServiceGroup) {
+                                        $NSserviceGroupFound = $true
+                                    } 
+                                    
+                                    # Search for $NSsvc in NSServices
+                                    $NSserviceFound = $false
+                                    $destService = Get-NSservice -NSserviceName $NSsvc
+                                    if ($destService) {
+                                        $NSserviceFound = $true
+                                    }
+
+                                    # Check if $NSsvc was found in NSServiceGroups or NSServices
+                                    if (!($NSserviceGroupFound) -and !($NSserviceFound)) {
+                                        Write-LogMessage -type ERROR -Message "Missing service or service group $NSsvc in $nsxFqdn :ERROR" -Colour Red
+                                        exit
+                                    } else {
+                                        Write-LogMessage -type INFO -Message "Searching Service $NSsvc in $nsxFqdn : SUCCESS" -Colour Green
+                                    }
+
+                                } catch {
+                                    Debug-CatchWriter -object $_
                                 }
-
-                                # Check if $NSsvc was found in NSServiceGroups or NSServices
-                                if (!($NSserviceGroupFound) -and !($NSserviceFound)) {
-                                    Write-LogMessage -type ERROR -Message "Missing service or service group $NSsvc in $nsxFqdn :ERROR" -Colour Red
-                                    exit
-                                } else {
-                                    Write-LogMessage -type INFO -Message "Searching Service $NSsvc in $nsxFqdn : SUCCESS" -Colour Green
-                                }
-
-                            } catch {
-                                Debug-CatchWriter -object $_
                             }
                         }
-
                         foreach ($nsxtGroup in $destinationNsxtGroups) {
                             Write-LogMessage -type INFO -Message "Patching NSXT group: $($nsxtGroup.groupDisplayName)"
                             if ($inputParam.skipOnDestination.NSXgroup.name.contains($nsxtGroup.groupDisplayName)) {
@@ -809,7 +827,7 @@ Foreach ($policyName in $inputParam.NSXSecurityPolicy.name) {
                         #Write-LogMessage -type INFO -Message "Destination policy rules JSON: $destPolicyRules "
                         Write-LogMessage -type INFO -Message "Patching security policy: $destPolicyName in server: $nsxtmanager"
                         try {
-                            New-NsxtSecurityPolicy -name $destPolicyName -displayName $destPolicyDisplayName -category $destPolicyCategory -rulesJson $destPolicyRules
+                            New-NsxtSecurityPolicy -name $destPolicyName -displayName $destPolicyDisplayName -category $destPolicyCategory -rulesJson $destPolicyRules -rulesCount $securityPolicy.rules.Count
                         } catch {
                             Debug-CatchWriter -object $_
                         }
