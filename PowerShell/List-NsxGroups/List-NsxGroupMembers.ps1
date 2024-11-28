@@ -81,13 +81,15 @@ switch ($exportFileFormat) {
     "json" {
         $tempExport = $nsxGroupsArray | ConvertTo-Json -Depth 5
         $tempExport >  "output.json"
-        Write-host "Exported NSX Group Members to output.json" - -ForegroundColor Yellow
+        Write-host "Exported NSX Group Members to output.json" -ForegroundColor Yellow
         }
     "csv" {
         New-Item -Path "output.csv" -ItemType File -Force
         add-content -path output.csv -Value ("NSX_group" + ";" + "VM_members")
-        foreach ($item in $nsxGroupsArray) {add-content -path output.csv -value ($item.nsx_group + ";" + ($item.members -join ",")) } 
-        Write-host "Exported NSX Group Members to output.csv" - -ForegroundColor Yellow
+        foreach ($item in $nsxGroupsArray) {
+            add-content -path "output.csv" -value ($item.NSX_group + ";" + $($item.VM_members -join ","))
+        } 
+        Write-host "Exported NSX Group Members to output.csv" -ForegroundColor Yellow
     }
     Default {}
 }

@@ -3,8 +3,11 @@ NSX_group;VM_members
 81422b9c-a416-4624-802b-a3132bd35f51;
 03335585-9574-4d44-a001-818ca9a9c282;
 sha-monitor-profile-default-all-esx-nodes-group;
-7e8d14d0-ae7a-4bf2-b3e2-74a8c2d92347;
-a8b7ddce-a5d6-11e8-a7e5-43344e310957;
-VCF-Created-Virtual-Machines;
-gold-group;
-silver-group;
+7e8d14d0-ae7a-4bf2-b3e2-74a8c2d92347;sfo-m01-r01-en01,sfo-m01-r01-en02,vCLS-19951c42-f047-c7bc-f4d7-5e600c0ccf97,vCLS-310b1c42-b3f5-c951-da73-a51f18cd4bb4
+a8b7ddce-a5d6-11e8-a7e5-43344e310957;sfo-m01-r01-en01,sfo-m01-r01-en02
+VCF-Created-Virtual-Machines;sfo-m01-nsx01a,sfo-m01-vc01,sfo-vcf01,sfo-w01-nsx01a,sfo-w01-vc01
+gold-group;gold-01,gold-02,gold-03
+silver-group;silver-01,silver-02
+NestedGroup;gold-01,gold-02,gold-03,silver-01,silver-02
+IPBasedGrop;
+Static_VMs;gold-01,silver-01

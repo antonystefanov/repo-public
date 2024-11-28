@@ -55,5 +55,26 @@
       "silver-01",
       "silver-02"
     ]
+  },
+  {
+    "NSX_group": "NestedGroup",
+    "VM_members": [
+      "gold-01",
+      "gold-02",
+      "gold-03",
+      "silver-01",
+      "silver-02"
+    ]
+  },
+  {
+    "NSX_group": "IPBasedGrop",
+    "VM_members": null
+  },
+  {
+    "NSX_group": "Static_VMs",
+    "VM_members": [
+      "gold-01",
+      "silver-01"
+    ]
   }
 ]
