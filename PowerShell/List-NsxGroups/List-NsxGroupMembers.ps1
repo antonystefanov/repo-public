@@ -21,11 +21,11 @@
         {
             "fqdn": "<NSX FQDN>",
             "username": "<NSX admin user name>",
-            "password":"<NSX user password>"
+            "password": "<NSX admin user password>"
         }
     ],
     "Output": [
-        {"fileFormat": "< txt or json >"}
+        {"fileFormat": "< csv or json >"}
     ]
 }
 #######################################################
