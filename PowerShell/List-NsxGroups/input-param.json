@@ -1,0 +1,12 @@
+{
+    "nsxManager":[
+		{
+		"fqdn": "sfo-m01-nsx01.sfo.rainpole.io",
+		"username": "admin",
+        "password":"VMw@re1!VMw@re1!"
+        }
+    ],
+    "Output": [
+		{"fileFormat": "csv"}
+    ]
+}

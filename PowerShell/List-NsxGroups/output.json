@@ -1,0 +1,59 @@
+[
+  {
+    "NSX_group": "9be75a65-f7ae-441f-8e97-1ee94103b74a",
+    "VM_members": null
+  },
+  {
+    "NSX_group": "81422b9c-a416-4624-802b-a3132bd35f51",
+    "VM_members": null
+  },
+  {
+    "NSX_group": "03335585-9574-4d44-a001-818ca9a9c282",
+    "VM_members": null
+  },
+  {
+    "NSX_group": "sha-monitor-profile-default-all-esx-nodes-group",
+    "VM_members": null
+  },
+  {
+    "NSX_group": "7e8d14d0-ae7a-4bf2-b3e2-74a8c2d92347",
+    "VM_members": [
+      "sfo-m01-r01-en01",
+      "sfo-m01-r01-en02",
+      "vCLS-19951c42-f047-c7bc-f4d7-5e600c0ccf97",
+      "vCLS-310b1c42-b3f5-c951-da73-a51f18cd4bb4"
+    ]
+  },
+  {
+    "NSX_group": "a8b7ddce-a5d6-11e8-a7e5-43344e310957",
+    "VM_members": [
+      "sfo-m01-r01-en01",
+      "sfo-m01-r01-en02"
+    ]
+  },
+  {
+    "NSX_group": "VCF-Created-Virtual-Machines",
+    "VM_members": [
+      "sfo-m01-nsx01a",
+      "sfo-m01-vc01",
+      "sfo-vcf01",
+      "sfo-w01-nsx01a",
+      "sfo-w01-vc01"
+    ]
+  },
+  {
+    "NSX_group": "gold-group",
+    "VM_members": [
+      "gold-01",
+      "gold-02",
+      "gold-03"
+    ]
+  },
+  {
+    "NSX_group": "silver-group",
+    "VM_members": [
+      "silver-01",
+      "silver-02"
+    ]
+  }
+]

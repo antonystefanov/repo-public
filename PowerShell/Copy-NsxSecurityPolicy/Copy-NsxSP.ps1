@@ -386,10 +386,6 @@ function Add-NSService {
         [Parameter (Mandatory = $true)] [PSCustomObject]$ServicesToAdd
     )
 
-    #Set counter to 0. It will be used to show progress
-    $Counter = 0
-    #endregion get new services information
-    
     
     #Main foreach structure to iterate through services from previous step
     foreach ($Service in $ServicesToAdd) {
@@ -751,7 +747,8 @@ Foreach ($policyName in $inputParam.NSXSecurityPolicy.name) {
                     
                     Write-LogMessage -type INFO -Message "Testing NSXT Authentication to server $nsxFqdn"
                     if (Test-NSXTAuthentication -server $nsxFqdn -user $nsxAdminUser -pass $nsxAdminPass) {
-                        
+                        $nsxtProductVersion = ((Get-NsxtService -Name "com.vmware.nsx.node").get()).product_version
+
                         if ($customNSserviceGroups.Count -gt 0) {
                             Write-LogMessage -type INFO -Message "Searching for Custom Services: ($($customNSserviceGroups.display_name)) in destination" -Colour yellow
                         
@@ -761,8 +758,9 @@ Foreach ($policyName in $inputParam.NSXSecurityPolicy.name) {
                             $ServiceDiff = Compare-Object -ReferenceObject $SrcNSXServicesResults -DifferenceObject $DstNSXServicesResults -Property id | Select-Object -ExpandProperty id
                             $ServicesToAdd = $SrcNSXServicesResults | Where-Object id -in $ServiceDiff
 
-                            Write-LogMessage -type INFO -Message "Services to add in destination $ServicesToAdd"
+                            
                             if (!($null -eq $ServicesToAdd)) {
+                                Write-LogMessage -type INFO -Message "Custom Services to add in destination $ServicesToAdd"
                                 Add-NSService -ServicesToAdd $ServicesToAdd
                             }
                             Write-LogMessage -type INFO -Message "Sleeping for 5 sec"
