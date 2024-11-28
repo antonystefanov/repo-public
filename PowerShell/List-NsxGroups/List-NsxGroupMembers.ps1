@@ -1,16 +1,18 @@
 # version 0.9
 # date: 2024.11.27
 # Developed by Antony Stefanov (Antony.Stefanov@broadcom.com)
-#
+# 
+
 # PowerShell script that exports NSX group memebers in json or txt format
+# 
+# Tested with PSVersion 7.4.5
+#
 # Required Powershel modules:
 #   VMware.VimAutomation.Common     min version     13.3.0.24145081                
 #   VMware.VimAutomation.Core       min version     13.3.0.24145081                  
 #   VMware.VimAutomation.Nsxt       min version     13.3.0.24145081                  
     
-    
-
-
+ 
 <# Sample imput JSON file:
 #######################################################
 {
@@ -23,11 +25,9 @@
         }
     ],
     "Output": [
-        {"fileName": "<Export File name>"},
         {"fileFormat": "< txt or json >"}
     ]
 }
-
 #######################################################
 #>
 
@@ -48,7 +48,6 @@ else {
     Exit
 }
 
-
 $nsxManager = $inputParam.nsxManager.fqdn
 $nsxAdminUser = $inputParam.nsxManager.username
 $nsxAdminPassword = $inputParam.nsxManager.password
@@ -56,8 +55,6 @@ $nsxSecurePassword = ConvertTo-SecureString $nsxAdminPassword -AsPlainText -Forc
 $nsxCred = New-Object -typename System.Management.Automation.PSCredential -argumentlist $nsxAdminUser, $nsxSecurePassword
 #$exportFileName = $inputParam.Output.filename
 $exportFileFormat = $inputParam.Output.FileFormat
-
-
 
 #Connect to NSX manager
 Connect-NsxtServer -Server $nsxManager -Credential $nsxCred
@@ -79,7 +76,7 @@ foreach ($nsxGroup in $NsxGroups.results) {
     $nsxGroupsArray += $obj
 }
 
-
+# Export NSX Group members to output file
 switch ($exportFileFormat) {
     "json" {
         $tempExport = $nsxGroupsArray | ConvertTo-Json -Depth 5
