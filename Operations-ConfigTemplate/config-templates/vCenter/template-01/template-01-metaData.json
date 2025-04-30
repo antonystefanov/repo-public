@@ -1,0 +1,43 @@
+{
+  "selectedConfig" : {
+    "config" : {
+      "vnetworking" : {
+        "network_vds" : {
+          "switches" : [ {
+            "path" : "string",
+            "config" : {
+              "mtu" : 0,
+              "uplink_port" : {
+                "name_array" : {
+                  "port_names" : [ "string" ]
+                }
+              },
+              "discovery_protocol" : {
+                "protocol_type" : "NONE",
+                "operation_type" : "LISTEN"
+              },
+              "multicast_filter_mode" : "LEGACY",
+              "network_io_control_enabled" : false,
+              "vm_vnic_network_resource_pools" : [ {
+                "name" : "string",
+                "description" : "string",
+                "reservation_quota" : 0
+              } ]
+            }
+          } ],
+          "portgroups" : [ {
+            "path" : "string",
+            "config" : {
+              "binding_type" : "STATIC",
+              "network_resource_pool_name" : "string"
+            },
+            "vds_path" : "string"
+          } ]
+        }
+      }
+    }
+  },
+  "description" : "",
+  "sourceResourceId" : "466dce64-8deb-4b54-82d0-b79629f9aa51",
+  "configVersion" : "9.0.0.24678707"
+}
