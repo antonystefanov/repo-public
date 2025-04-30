@@ -2,24 +2,6 @@
   "config" : {
     "vnetworking" : {
       "network_vds" : {
-        "switches" : [ {
-          "path" : "/sfo-m01-dc01/network/sfo-m01-cl01-vds01",
-          "config" : {
-            "mtu" : 8900,
-            "uplink_port" : {
-              "name_array" : {
-                "port_names" : [ "uplink2", "uplink1" ]
-              }
-            },
-            "discovery_protocol" : {
-              "protocol_type" : "LLDP",
-              "operation_type" : "BOTH"
-            },
-            "multicast_filter_mode" : "SNOOPING",
-            "network_io_control_enabled" : true,
-            "vm_vnic_network_resource_pools" : [ ]
-          }
-        } ],
         "portgroups" : [ {
           "path" : "/sfo-m01-dc01/network/sfo-m01-cl01-vds-DVUplinks-21",
           "config" : {
