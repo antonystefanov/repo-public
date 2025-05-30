@@ -1,0 +1,555 @@
+{
+  "config" : {
+    "vcenter" : {
+      "authmgmt" : {
+        "vc_groups" : [ {
+          "members" : [ ],
+          "principal" : "NsxViAdministrators@sfo-w01.local",
+          "description" : "SSO group to manage NSX."
+        }, {
+          "members" : [ ],
+          "principal" : "NsxAuditors@sfo-w01.local",
+          "description" : "SSO group to view NSX configuration."
+        }, {
+          "members" : [ ],
+          "principal" : "SDDCAdmins@sfo-w01.local",
+          "description" : "SDDCAdmins"
+        }, {
+          "members" : [ ],
+          "principal" : "ExternalIDPUsers@sfo-w01.local",
+          "description" : "Well-known external IDP users' group, which registers external IDP users as guests."
+        }, {
+          "members" : [ ],
+          "principal" : "vCLSAdmin@sfo-w01.local",
+          "description" : "Contains privileges over vCLS entities"
+        } ],
+        "user_roles" : [ {
+          "name" : "Cloud Admin Role",
+          "privileges" : [ "VApp.Suspend", "Folder.Create", "Datastore.UpdateVirtualMachineMetadata", "VirtualMachine.Provisioning.FileRandomAccess", "Folder.Move", "VirtualMachine.Config.RawDevice", "Namespaces.SelfServiceManage", "Datastore.UpdateVirtualMachineFiles", "VirtualMachine.Namespace.ModifyContent", "Global.SetCustomField", "VirtualMachine.Provisioning.MarkAsVM", "Alarm.Acknowledge", "VirtualMachine.Config.RemoveDisk", "InventoryService.Tagging.AttachTag", "Extension.Update", "Alarm.DisableActions", "VirtualMachine.Config.Resource", "InventoryService.Tagging.ModifyUsedByForCategory", "Cns.Searchable", "VApp.ApplicationConfig", "VApp.Delete", "VirtualMachine.Config.Rename", "VirtualMachine.Config.ReloadFromPath", "VApp.Rename", "ContentLibrary.DownloadSession", "Resource.HotMigrate", "VirtualMachine.Config.ResetGuestInfo", "VirtualMachine.Interact.Backup", "vService.ReconfigureDependency", "ContentLibrary.CheckInTemplate", "VApp.AssignVApp", "vSphereDataProtection.Recovery", "Namespaces.Configure", "VirtualMachine.GuestOperations.Query", "ContentLibrary.EvictLibraryItem", "VirtualMachine.Provisioning.Customize", "InventoryService.Tagging.DeleteCategory", "Folder.Delete", "VirtualMachine.GuestOperations.Execute", "VirtualMachine.Interact.SetFloppyMedia", "VApp.Create", "VirtualMachine.Provisioning.DiskRandomAccess", "VirtualMachine.Interact.ToolsInstall", "Authorization.ModifyPermissions", "Global.Health", "Global.SystemTag", "VirtualMachine.Interact.Pause", "Datastore.Config", "VirtualMachine.Config.AdvancedConfig", "ContentLibrary.TypeIntrospection", "Datastore.DeleteFile", "VirtualMachine.Config.ManagedBy", "Global.CancelTask", "VirtualMachine.Config.DiskExtend", "ContentLibrary.DeleteLocalLibrary", "VirtualMachine.Inventory.Unregister", "Alarm.Create", "VirtualMachine.Config.UpgradeVirtualHardware", "ContentLibrary.GetConfiguration", "Resource.EditPool", "ScheduledTask.Create", "CertificateManagement.Manage", "InventoryService.Tagging.ObjectAttachable", "ContentLibrary.DeleteCertFromTrustStore", "Datastore.AllocateSpace", "Network.Assign", "VirtualMachine.Inventory.Move", "VirtualMachine.GuestOperations.Modify", "VApp.AssignVM", "Alarm.Edit", "StorageProfile.Update", "VApp.PowerOn", "VirtualMachine.Config.Memory", "Alarm.Delete", "VirtualMachine.Provisioning.PromoteDisks", "VirtualMachine.Config.QueryFTCompatibility", "ContentLibrary.EvictSubscribedLibrary", "VirtualMachine.Config.QueryUnownedFiles", "VirtualMachine.Namespace.ReadContent", "VApp.Clone", "Datastore.FileManagement", "VirtualMachine.Hbr.ReplicaManagement", "VirtualMachine.Config.MksControl", "Resource.AssignVMToPool", "InventoryService.Tagging.EditTag", "ContentLibrary.DeleteSubscribedLibrary", "VirtualMachine.Interact.DeviceConnection", "StorageProfile.View", "ContentLibrary.UpdateSession", "VirtualMachine.Config.AddExistingDisk", "VirtualMachine.Inventory.CreateFromExisting", "VirtualMachine.Interact.Reset", "ComputePolicy.Manage", "VApp.Export", "VirtualMachine.Namespace.Query", "Sessions.ValidateSession", "ScheduledTask.Delete", "ContentLibrary.ImportStorage", "VirtualMachine.Interact.ConsoleInteract", "VirtualMachine.Provisioning.DiskRandomRead", "Authorization.ModifyRoles", "VirtualMachine.Config.AddRemoveDevice", "VirtualMachine.Inventory.Delete", "Resource.QueryVMotion", "VirtualMachine.Provisioning.Clone", "Host.Hbr.HbrManagement", "VirtualMachine.State.CreateSnapshot", "VirtualMachineClasses.Manage", "VirtualMachine.Config.Annotation", "Global.ManageCustomFields", "Resource.CreatePool", "VirtualMachine.Interact.SetCDMedia", "ContentLibrary.UpdateLibrary", "VirtualMachine.Interact.AnswerQuestion", "InventoryService.Tagging.ModifyUsedByForTag", "VirtualMachine.Config.EditDevice", "VirtualMachine.Hbr.ConfigureReplication", "VApp.InstanceConfig", "ScheduledTask.Run", "VirtualMachine.Config.CPUCount", "VirtualMachine.Config.AddNewDisk", "VirtualMachine.Interact.Suspend", "VirtualMachine.State.RevertToSnapshot", "ContentLibrary.SyncLibraryItem", "Datastore.Browse", "VApp.ExtractOvfEnvironment", "VApp.Import", "VirtualMachine.GuestOperations.ModifyAliases", "Trust.Manage", "Global.LogEvent", "Extension.Unregister", "ScheduledTask.Edit", "VirtualMachine.Provisioning.DeployTemplate", "VirtualMachine.Config.ChangeTracking", "VirtualMachine.Interact.DefragmentAllDisks", "VirtualMachine.State.RenameSnapshot", "HLM.Manage", "VirtualMachine.Provisioning.ModifyCustSpecs", "VApp.PowerOff", "VirtualMachine.Config.DiskLease", "ContentLibrary.UpdateSubscribedLibrary", "VirtualMachine.Config.HostUSBDevice", "VirtualMachine.Provisioning.CreateTemplateFromVM", "ContentLibrary.CreateSubscribedLibrary", "VApp.ResourceConfig", "Vsan.Cluster.ShallowRekey", "VirtualMachine.Provisioning.GetVmFiles", "VirtualMachine.Interact.SESparseMaintenance", "VirtualMachine.Provisioning.PutVmFiles", "VirtualMachine.Namespace.EventNotify", "VirtualMachine.Namespace.Management", "Resource.MovePool", "VirtualMachine.Inventory.Create", "Alarm.SetStatus", "Sessions.GlobalMessage", "VirtualMachine.Interact.PowerOn", "VirtualMachine.Interact.DnD", "Global.ServiceManagers", "VirtualMachine.Interact.PutUsbScanCodes", "ContentLibrary.UpdateLibraryItem", "vService.CreateDependency", "Global.GlobalTag", "ContentLibrary.DeleteLibraryItem", "Resource.ColdMigrate", "vService.DestroyDependency", "Resource.RenamePool", "VirtualMachine.Interact.PowerOff", "VirtualMachine.Interact.CreateScreenshot", "VirtualMachine.State.RemoveSnapshot", "InventoryService.Tagging.CreateTag", "ContentLibrary.UpdateLocalLibrary", "vService.UpdateDependency", "InventoryService.Tagging.DeleteTag", "VirtualMachine.Provisioning.ReadCustSpecs", "InventoryService.Tagging.EditCategory", "ContentLibrary.AddCertToTrustStore", "VirtualMachine.Provisioning.CloneTemplate", "VirtualMachine.Inventory.Register", "VApp.Move", "VirtualMachine.Interact.GuestControl", "InventoryService.Tagging.CreateCategory", "VApp.ManagedByConfig", "VirtualMachine.Provisioning.MarkAsTemplate", "VirtualMachine.Config.SwapPlacement", "VirtualMachine.Namespace.Event", "Resource.DeletePool", "VirtualMachine.Hbr.MonitorReplication", "ContentLibrary.SyncLibrary", "ContentLibrary.UpdateConfiguration", "VApp.AssignResourcePool", "vSphereDataProtection.Protection", "Folder.Rename", "Resource.ApplyRecommendation", "Extension.Register", "VirtualMachine.Config.Settings", "ContentLibrary.ProbeSubscription", "ContentLibrary.ReadStorage", "VApp.Unregister", "StorageViews.View", "ContentLibrary.AddLibraryItem", "ContentLibrary.CreateLocalLibrary", "Resource.AssignVAppToPool", "VirtualMachine.GuestOperations.QueryAliases", "ContentLibrary.CheckOutTemplate" ],
+          "description" : ""
+        }, {
+          "name" : "nsxt_a68e6d35-3a2a-48ab-9277-b140979e8172",
+          "privileges" : [ "VirtualMachine.Config.AddRemoveDevice", "DVPortgroup.Delete", "VirtualMachine.Inventory.Delete", "VcIntegrity.ClusterConfiguration.Modify", "Network.Delete", "Global.Settings", "Folder.Create", "VirtualMachine.Config.DiskExtend", "VcIntegrity.lifecycleSoftwareSpecification.Write", "DVPortgroup.PolicyOp", "Global.DisableMethods", "Network.Move", "DVSwitch.Modify", "Folder.Move", "VirtualMachine.Config.RawDevice", "Global.ManageCustomFields", "Alarm.Create", "ServiceAccount.ManageAccount", "VirtualMachine.Config.UpgradeVirtualHardware", "VirtualMachine.Interact.PowerOff", "Global.Licenses", "Global.SetCustomField", "DVSwitch.Vspan", "InventoryService.Tagging.ModifyUsedByForTag", "Host.Config.AutoStart", "VirtualMachine.Config.EditDevice", "InventoryService.Tagging.AttachTag", "DVSwitch.Create", "VApp.InstanceConfig", "Extension.Update", "VirtualMachine.Config.Resource", "VirtualMachine.Config.CPUCount", "VirtualMachine.State.RemoveSnapshot", "InventoryService.Tagging.CreateTag", "VcIntegrity.lifecycleSettings.Write", "Global.EnableMethods", "VirtualMachine.Config.AddNewDisk", "InventoryService.Tagging.DeleteTag", "InventoryService.Tagging.EditCategory", "InventoryService.Tagging.ObjectAttachable", "VApp.ApplicationConfig", "Host.Config.Maintenance", "Datastore.AllocateSpace", "VcIntegrity.lifecycleGeneral.Write", "Network.Assign", "VirtualMachine.Config.Rename", "VApp.Import", "DVSwitch.HostOp", "Global.LogEvent", "Extension.Unregister", "VcIntegrity.lifecycleSoftwareRemediation.Write", "EAM.Modify", "InventoryService.Tagging.CreateCategory", "VirtualMachine.Config.Memory", "DVSwitch.PolicyOp", "Network.Config", "ServiceAccount.Administer", "VApp.ResourceConfig", "Host.Local.ManageUserGroups", "DVPortgroup.ScopeOp", "DVPortgroup.Create", "EAM.Config", "VcIntegrity.ClusterConfiguration.View", "InventoryService.Tagging.DeleteCategory", "Folder.ExternalFolderManagement", "Resource.AssignVMToPool", "Folder.Delete", "EAM.View", "Host.Config.Network", "InventoryService.Tagging.EditTag", "VirtualMachine.Interact.DeviceConnection", "Host.Config.Settings", "Folder.Rename", "Host.Inventory.EditCluster", "VirtualMachine.Config.AddExistingDisk", "Extension.Register", "VirtualMachine.Config.Settings", "VirtualMachine.Inventory.Create", "VcIntegrity.lifecycleSoftwareSpecification.Read", "VcIntegrity.lifecycleHealth.Read", "VApp.PullFromUrls", "VcIntegrity.lifecycleSettings.Read", "ComputePolicy.Manage", "VApp.Export", "Sessions.ValidateSession", "Authorization.ModifyPermissions", "DVPortgroup.Modify", "DVSwitch.Move", "VirtualMachine.Interact.PowerOn", "DVSwitch.PortSetting", "VirtualMachine.Config.AdvancedConfig", "VcIntegrity.lifecycleGeneral.Read", "Authorization.ModifyRoles" ],
+          "description" : "NSX Role"
+        } ],
+        "permissions" : [ {
+          "key" : {
+            "path" : "GlobalAcl",
+            "principal_name" : "WorkloadStorage@sfo-w01.local",
+            "principal_type" : "GROUP"
+          },
+          "role" : "WorkloadStorageManagement",
+          "propagate" : true
+        }, {
+          "key" : {
+            "path" : "GlobalAcl",
+            "principal_name" : "NsxAuditors@sfo-w01.local",
+            "principal_type" : "GROUP"
+          },
+          "role" : "NsxAuditor",
+          "propagate" : true
+        }, {
+          "key" : {
+            "path" : "GlobalAcl",
+            "principal_name" : "NsxViAdministrators@sfo-w01.local",
+            "principal_type" : "GROUP"
+          },
+          "role" : "NsxViAdministrator",
+          "propagate" : true
+        }, {
+          "key" : {
+            "path" : "/sfo-w01-DC/vm/Namespaces/sv-01/svc-velero-domain-c10/vSpherePods",
+            "principal_name" : "Administrators@sfo-w01.local",
+            "principal_type" : "GROUP"
+          },
+          "role" : "vSpherePodAdministrator",
+          "propagate" : true
+        }, {
+          "key" : {
+            "path" : "/sfo-w01-DC/vm/Namespaces/sv-01/svc-tkg-domain-c10/vSpherePods",
+            "principal_name" : "Administrators@sfo-w01.local",
+            "principal_type" : "GROUP"
+          },
+          "role" : "vSpherePodAdministrator",
+          "propagate" : true
+        }, {
+          "key" : {
+            "path" : "/sfo-w01-DC/vm/Namespaces",
+            "principal_name" : "wcp-schedext-user-f3b1f5f5-efd8-461b-adc5-8fe64437a0c2-2a53ed69-bc00-46ad-9fb2-07ab8070d8bf@sfo-w01.local",
+            "principal_type" : "USER"
+          },
+          "role" : "vSphereKubernetesManager",
+          "propagate" : true
+        }, {
+          "key" : {
+            "path" : "/sfo-w01-DC/vm/Namespaces",
+            "principal_name" : "wcp-cluster-user-f3b1f5f5-efd8-461b-adc5-8fe64437a0c2-2a53ed69-bc00-46ad-9fb2-07ab8070d8bf@sfo-w01.local",
+            "principal_type" : "USER"
+          },
+          "role" : "vSphereKubernetesManager",
+          "propagate" : true
+        }, {
+          "key" : {
+            "path" : "/sfo-w01-DC/vm/Namespaces",
+            "principal_name" : "wcp-rbacserviceop-user-f3b1f5f5-efd8-461b-adc5-8fe64437a0c2-2a53ed69-bc00-46ad-9fb2-07ab8070d8bf@sfo-w01.local",
+            "principal_type" : "USER"
+          },
+          "role" : "ReadOnly",
+          "propagate" : true
+        }, {
+          "key" : {
+            "path" : "/sfo-w01-DC/vm/Namespaces",
+            "principal_name" : "wcp-mobilityop-user-f3b1f5f5-efd8-461b-adc5-8fe64437a0c2-2a53ed69-bc00-46ad-9fb2-07ab8070d8bf@sfo-w01.local",
+            "principal_type" : "USER"
+          },
+          "role" : "MobilityOperatorController",
+          "propagate" : true
+        }, {
+          "key" : {
+            "path" : "/sfo-w01-DC/vm/Namespaces",
+            "principal_name" : "wcp-vmop-user-f3b1f5f5-efd8-461b-adc5-8fe64437a0c2-2a53ed69-bc00-46ad-9fb2-07ab8070d8bf@sfo-w01.local",
+            "principal_type" : "USER"
+          },
+          "role" : "VMOperatorController",
+          "propagate" : true
+        }, {
+          "key" : {
+            "path" : "/sfo-w01-DC/vm/Namespaces",
+            "principal_name" : "Administrators@sfo-w01.local",
+            "principal_type" : "GROUP"
+          },
+          "role" : "SupervisorAdministrator",
+          "propagate" : true
+        }, {
+          "key" : {
+            "path" : "/sfo-w01-DC/vm/Namespaces/sv-01",
+            "principal_name" : "wcp-appplatform-user-f3b1f5f5-efd8-461b-adc5-8fe64437a0c2-2a53ed69-bc00-46ad-9fb2-07ab8070d8bf@sfo-w01.local",
+            "principal_type" : "USER"
+          },
+          "role" : "SupervisorServiceSupervisorFolder",
+          "propagate" : true
+        }, {
+          "key" : {
+            "path" : "/sfo-w01-DC/vm/Namespaces/sv-01",
+            "principal_name" : "Administrators@sfo-w01.local",
+            "principal_type" : "GROUP"
+          },
+          "role" : "SupervisorAdministrator",
+          "propagate" : true
+        }, {
+          "key" : {
+            "path" : "/sfo-w01-DC/vm/vCLS/vCLS-8c301c42-1179-cebe-5ca1-1389790e0ed8",
+            "principal_name" : "Administrators@sfo-w01.local",
+            "principal_type" : "GROUP"
+          },
+          "role" : "vCLSAdmin",
+          "propagate" : false
+        }, {
+          "key" : {
+            "path" : "/sfo-w01-DC/vm/vCLS/vCLS-8c301c42-1179-cebe-5ca1-1389790e0ed8",
+            "principal_name" : "vCLSAdmin@sfo-w01.local",
+            "principal_type" : "GROUP"
+          },
+          "role" : "vCLSAdmin",
+          "propagate" : false
+        }, {
+          "key" : {
+            "path" : "/sfo-w01-DC/host/sfo-w01-cl01/Resources/Namespaces",
+            "principal_name" : "wcp-schedext-user-f3b1f5f5-efd8-461b-adc5-8fe64437a0c2-2a53ed69-bc00-46ad-9fb2-07ab8070d8bf@sfo-w01.local",
+            "principal_type" : "USER"
+          },
+          "role" : "vSphereKubernetesManager",
+          "propagate" : true
+        }, {
+          "key" : {
+            "path" : "/sfo-w01-DC/host/sfo-w01-cl01/Resources/Namespaces",
+            "principal_name" : "wcp-cluster-user-f3b1f5f5-efd8-461b-adc5-8fe64437a0c2-2a53ed69-bc00-46ad-9fb2-07ab8070d8bf@sfo-w01.local",
+            "principal_type" : "USER"
+          },
+          "role" : "vSphereKubernetesManager",
+          "propagate" : true
+        }, {
+          "key" : {
+            "path" : "/sfo-w01-DC/host/sfo-w01-cl01/Resources/Namespaces",
+            "principal_name" : "wcp-mobilityop-user-f3b1f5f5-efd8-461b-adc5-8fe64437a0c2-2a53ed69-bc00-46ad-9fb2-07ab8070d8bf@sfo-w01.local",
+            "principal_type" : "USER"
+          },
+          "role" : "MobilityOperatorController",
+          "propagate" : true
+        }, {
+          "key" : {
+            "path" : "/sfo-w01-DC/host/sfo-w01-cl01/Resources/Namespaces",
+            "principal_name" : "wcp-vmop-user-f3b1f5f5-efd8-461b-adc5-8fe64437a0c2-2a53ed69-bc00-46ad-9fb2-07ab8070d8bf@sfo-w01.local",
+            "principal_type" : "USER"
+          },
+          "role" : "VMOperatorController",
+          "propagate" : true
+        }, {
+          "key" : {
+            "path" : "/sfo-w01-DC/host/sfo-w01-cl01/Resources/Namespaces",
+            "principal_name" : "Administrators@sfo-w01.local",
+            "principal_type" : "GROUP"
+          },
+          "role" : "SupervisorAdministrator",
+          "propagate" : true
+        }, {
+          "key" : {
+            "path" : "/sfo-w01-DC/vm/vCLS/vCLS-ec8a1c42-707d-5d7a-06f5-2bbc2f63fcbf",
+            "principal_name" : "Administrators@sfo-w01.local",
+            "principal_type" : "GROUP"
+          },
+          "role" : "vCLSAdmin",
+          "propagate" : false
+        }, {
+          "key" : {
+            "path" : "/sfo-w01-DC/vm/vCLS/vCLS-ec8a1c42-707d-5d7a-06f5-2bbc2f63fcbf",
+            "principal_name" : "vCLSAdmin@sfo-w01.local",
+            "principal_type" : "GROUP"
+          },
+          "role" : "vCLSAdmin",
+          "propagate" : false
+        }, {
+          "key" : {
+            "path" : "/sfo-w01-DC/vm/Namespaces/sv-01/svc-tkg-domain-c10",
+            "principal_name" : "Administrators@sfo-w01.local",
+            "principal_type" : "GROUP"
+          },
+          "role" : "VM-Service-VM-Management",
+          "propagate" : true
+        }, {
+          "key" : {
+            "path" : "/sfo-w01-DC/datastore/sfo-w01-cl01-vsan01",
+            "principal_name" : "wcp-storage-user-f3b1f5f5-efd8-461b-adc5-8fe64437a0c2-2a53ed69-bc00-46ad-9fb2-07ab8070d8bf@sfo-w01.local",
+            "principal_type" : "USER"
+          },
+          "role" : "CNS-SUPERVISOR-DATASTORE",
+          "propagate" : true
+        }, {
+          "key" : {
+            "path" : "/sfo-w01-DC/vm/Namespaces/sv-01/svc-velero-domain-c10",
+            "principal_name" : "Administrators@sfo-w01.local",
+            "principal_type" : "GROUP"
+          },
+          "role" : "VM-Service-VM-Management",
+          "propagate" : true
+        }, {
+          "key" : {
+            "path" : "/sfo-w01-DC/host/sfo-w01-cl01/Resources/Namespaces/svc-velero-domain-c10",
+            "principal_name" : "Administrators@sfo-w01.local",
+            "principal_type" : "GROUP"
+          },
+          "role" : "VM-Service-VM-Management",
+          "propagate" : true
+        }, {
+          "key" : {
+            "path" : "/sfo-w01-DC/host/sfo-w01-cl01",
+            "principal_name" : "wcpsvc-2a53ed69-bc00-46ad-9fb2-07ab8070d8bf@sfo-w01.local",
+            "principal_type" : "USER"
+          },
+          "role" : "NamespacesQueryRole",
+          "propagate" : true
+        }, {
+          "key" : {
+            "path" : "/sfo-w01-DC/host/sfo-w01-cl01",
+            "principal_name" : "wcp-authproxy-user-f3b1f5f5-efd8-461b-adc5-8fe64437a0c2-2a53ed69-bc00-46ad-9fb2-07ab8070d8bf@sfo-w01.local",
+            "principal_type" : "USER"
+          },
+          "role" : "NamespacesQueryRole",
+          "propagate" : true
+        }, {
+          "key" : {
+            "path" : "/sfo-w01-DC/host/sfo-w01-cl01",
+            "principal_name" : "wcp-observabilityop-user-f3b1f5f5-efd8-461b-adc5-8fe64437a0c2-2a53ed69-bc00-46ad-9fb2-07ab8070d8bf@sfo-w01.local",
+            "principal_type" : "USER"
+          },
+          "role" : "ObservabilityOperator",
+          "propagate" : true
+        }, {
+          "key" : {
+            "path" : "/sfo-w01-DC/host/sfo-w01-cl01",
+            "principal_name" : "wcp-storage-user-f3b1f5f5-efd8-461b-adc5-8fe64437a0c2-2a53ed69-bc00-46ad-9fb2-07ab8070d8bf@sfo-w01.local",
+            "principal_type" : "USER"
+          },
+          "role" : "CNS-SUPERVISOR-HOST-CONFIG-STORAGE-AND-CNS-VM",
+          "propagate" : true
+        }, {
+          "key" : {
+            "path" : "/sfo-w01-DC/host/sfo-w01-cl01",
+            "principal_name" : "wcp-nsop-user-f3b1f5f5-efd8-461b-adc5-8fe64437a0c2-2a53ed69-bc00-46ad-9fb2-07ab8070d8bf@sfo-w01.local",
+            "principal_type" : "USER"
+          },
+          "role" : "NSOperatorController",
+          "propagate" : true
+        }, {
+          "key" : {
+            "path" : "/sfo-w01-DC/host/sfo-w01-cl01",
+            "principal_name" : "wcp-appplatform-user-f3b1f5f5-efd8-461b-adc5-8fe64437a0c2-2a53ed69-bc00-46ad-9fb2-07ab8070d8bf@sfo-w01.local",
+            "principal_type" : "USER"
+          },
+          "role" : "SupervisorServiceCluster",
+          "propagate" : true
+        }, {
+          "key" : {
+            "path" : "/sfo-w01-DC/host/sfo-w01-cl01",
+            "principal_name" : "wcp-schedext-user-f3b1f5f5-efd8-461b-adc5-8fe64437a0c2-2a53ed69-bc00-46ad-9fb2-07ab8070d8bf@sfo-w01.local",
+            "principal_type" : "USER"
+          },
+          "role" : "vSphereKubernetesManager",
+          "propagate" : true
+        }, {
+          "key" : {
+            "path" : "/sfo-w01-DC/host/sfo-w01-cl01",
+            "principal_name" : "wcp-cluster-user-f3b1f5f5-efd8-461b-adc5-8fe64437a0c2-2a53ed69-bc00-46ad-9fb2-07ab8070d8bf@sfo-w01.local",
+            "principal_type" : "USER"
+          },
+          "role" : "vSphereKubernetesManager",
+          "propagate" : true
+        }, {
+          "key" : {
+            "path" : "/sfo-w01-DC/host/sfo-w01-cl01/Resources/Namespaces/svc-tkg-domain-c10",
+            "principal_name" : "Administrators@sfo-w01.local",
+            "principal_type" : "GROUP"
+          },
+          "role" : "VM-Service-VM-Management",
+          "propagate" : true
+        }, {
+          "key" : {
+            "path" : "/",
+            "principal_name" : "wcp-rbacserviceop-user-f3b1f5f5-efd8-461b-adc5-8fe64437a0c2-2a53ed69-bc00-46ad-9fb2-07ab8070d8bf@sfo-w01.local",
+            "principal_type" : "USER"
+          },
+          "role" : "ReadOnly",
+          "propagate" : true
+        }, {
+          "key" : {
+            "path" : "/",
+            "principal_name" : "wcp-mobilityop-user-f3b1f5f5-efd8-461b-adc5-8fe64437a0c2-2a53ed69-bc00-46ad-9fb2-07ab8070d8bf@sfo-w01.local",
+            "principal_type" : "USER"
+          },
+          "role" : "MobilityOperatorController",
+          "propagate" : true
+        }, {
+          "key" : {
+            "path" : "/",
+            "principal_name" : "wcp-vmop-user-f3b1f5f5-efd8-461b-adc5-8fe64437a0c2-2a53ed69-bc00-46ad-9fb2-07ab8070d8bf@sfo-w01.local",
+            "principal_type" : "USER"
+          },
+          "role" : "VMServiceRootFolder",
+          "propagate" : true
+        }, {
+          "key" : {
+            "path" : "/",
+            "principal_name" : "wcp-observabilityop-user-f3b1f5f5-efd8-461b-adc5-8fe64437a0c2-2a53ed69-bc00-46ad-9fb2-07ab8070d8bf@sfo-w01.local",
+            "principal_type" : "USER"
+          },
+          "role" : "ObservabilityOperator",
+          "propagate" : true
+        }, {
+          "key" : {
+            "path" : "/",
+            "principal_name" : "wcp-storage-user-f3b1f5f5-efd8-461b-adc5-8fe64437a0c2-2a53ed69-bc00-46ad-9fb2-07ab8070d8bf@sfo-w01.local",
+            "principal_type" : "USER"
+          },
+          "role" : "CNS-SUPERVISOR-SEARCH-AND-SPBM",
+          "propagate" : false
+        }, {
+          "key" : {
+            "path" : "/",
+            "principal_name" : "wcp-nsop-user-f3b1f5f5-efd8-461b-adc5-8fe64437a0c2-2a53ed69-bc00-46ad-9fb2-07ab8070d8bf@sfo-w01.local",
+            "principal_type" : "USER"
+          },
+          "role" : "NSOperatorController",
+          "propagate" : true
+        }, {
+          "key" : {
+            "path" : "/",
+            "principal_name" : "wcp-appplatform-user-f3b1f5f5-efd8-461b-adc5-8fe64437a0c2-2a53ed69-bc00-46ad-9fb2-07ab8070d8bf@sfo-w01.local",
+            "principal_type" : "USER"
+          },
+          "role" : "SupervisorServiceRootFolder",
+          "propagate" : true
+        }, {
+          "key" : {
+            "path" : "/",
+            "principal_name" : "wcp-schedext-user-f3b1f5f5-efd8-461b-adc5-8fe64437a0c2-2a53ed69-bc00-46ad-9fb2-07ab8070d8bf@sfo-w01.local",
+            "principal_type" : "USER"
+          },
+          "role" : "WorkloadStorageManagement",
+          "propagate" : true
+        }, {
+          "key" : {
+            "path" : "/",
+            "principal_name" : "wcp-cluster-user-f3b1f5f5-efd8-461b-adc5-8fe64437a0c2-2a53ed69-bc00-46ad-9fb2-07ab8070d8bf@sfo-w01.local",
+            "principal_type" : "USER"
+          },
+          "role" : "WorkloadStorageManagement",
+          "propagate" : true
+        }, {
+          "key" : {
+            "path" : "/",
+            "principal_name" : "Administrator@sfo-w01.local",
+            "principal_type" : "USER"
+          },
+          "role" : "Admin",
+          "propagate" : true
+        }, {
+          "key" : {
+            "path" : "/",
+            "principal_name" : "SDDCAdmins@sfo-w01.local",
+            "principal_type" : "GROUP"
+          },
+          "role" : "Admin",
+          "propagate" : true
+        }, {
+          "key" : {
+            "path" : "/sfo-w01-DC",
+            "principal_name" : "wcp-mobilityop-user-f3b1f5f5-efd8-461b-adc5-8fe64437a0c2-2a53ed69-bc00-46ad-9fb2-07ab8070d8bf@sfo-w01.local",
+            "principal_type" : "USER"
+          },
+          "role" : "MobilityOperatorController",
+          "propagate" : true
+        }, {
+          "key" : {
+            "path" : "/sfo-w01-DC",
+            "principal_name" : "wcp-vmop-user-f3b1f5f5-efd8-461b-adc5-8fe64437a0c2-2a53ed69-bc00-46ad-9fb2-07ab8070d8bf@sfo-w01.local",
+            "principal_type" : "USER"
+          },
+          "role" : "VMOperatorController",
+          "propagate" : true
+        }, {
+          "key" : {
+            "path" : "/sfo-w01-DC",
+            "principal_name" : "wcp-storage-user-f3b1f5f5-efd8-461b-adc5-8fe64437a0c2-2a53ed69-bc00-46ad-9fb2-07ab8070d8bf@sfo-w01.local",
+            "principal_type" : "USER"
+          },
+          "role" : "ReadOnly",
+          "propagate" : false
+        }, {
+          "key" : {
+            "path" : "/sfo-w01-DC",
+            "principal_name" : "wcp-schedext-user-f3b1f5f5-efd8-461b-adc5-8fe64437a0c2-2a53ed69-bc00-46ad-9fb2-07ab8070d8bf@sfo-w01.local",
+            "principal_type" : "USER"
+          },
+          "role" : "PodVmLifeCycleManager",
+          "propagate" : true
+        }, {
+          "key" : {
+            "path" : "/sfo-w01-DC",
+            "principal_name" : "wcp-cluster-user-f3b1f5f5-efd8-461b-adc5-8fe64437a0c2-2a53ed69-bc00-46ad-9fb2-07ab8070d8bf@sfo-w01.local",
+            "principal_type" : "USER"
+          },
+          "role" : "PodVmLifeCycleManager",
+          "propagate" : true
+        }, {
+          "key" : {
+            "path" : "/sfo-w01-DC/vm/vCLS",
+            "principal_name" : "Administrators@sfo-w01.local",
+            "principal_type" : "GROUP"
+          },
+          "role" : "vCLSAdmin",
+          "propagate" : true
+        }, {
+          "key" : {
+            "path" : "/sfo-w01-DC/vm/vCLS",
+            "principal_name" : "vCLSAdmin@sfo-w01.local",
+            "principal_type" : "GROUP"
+          },
+          "role" : "vCLSAdmin",
+          "propagate" : true
+        } ],
+        "token_policy" : {
+          "hok_refresh" : 2592000000,
+          "token_renewal" : 10,
+          "bearer_refresh" : 21600000,
+          "clock_tolerance" : 600000,
+          "token_delegation" : 10
+        },
+        "lockout_policy" : {
+          "unlock_time" : 300,
+          "failure_interval" : 180,
+          "failed_login_attempts" : 5
+        },
+        "password_policy" : {
+          "max_life" : 90,
+          "max_length" : 20,
+          "min_length" : 8,
+          "alpha_chars" : 2,
+          "numeric_chars" : 1,
+          "special_chars" : 1,
+          "password_reuse" : 5,
+          "lowercase_chars" : 1,
+          "uppercase_chars" : 1,
+          "adj_identical_chars" : 3
+        }
+      },
+      "appliance" : {
+        "network" : {
+          "proxy_configuration" : [ {
+            "port" : -1,
+            "server" : "",
+            "enabled" : false,
+            "protocol" : "HTTP"
+          }, {
+            "port" : -1,
+            "server" : "",
+            "enabled" : false,
+            "protocol" : "HTTPS"
+          }, {
+            "port" : -1,
+            "server" : "",
+            "enabled" : false,
+            "protocol" : "FTP"
+          } ],
+          "dns_server_configuration" : {
+            "mode" : "IS_STATIC",
+            "domains" : [ "rainpole.io", "sfo.rainpole.io" ],
+            "servers" : [ "10.11.10.4" ]
+          }
+        },
+        "access_settings" : {
+          "ssh" : {
+            "enabled" : true
+          },
+          "dcui" : {
+            "enabled" : true
+          },
+          "console_cli" : {
+            "enabled" : true
+          }
+        },
+        "datetime_config" : {
+          "ntp" : {
+            "servers" : [ "10.11.10.4" ]
+          },
+          "time_sync" : {
+            "mode" : "NTP"
+          },
+          "time_zone" : {
+            "name" : "Etc/UTC"
+          }
+        },
+        "user_account_settings" : {
+          "root_account_policy" : {
+            "roles" : [ "superAdmin" ],
+            "enabled" : true,
+            "fullname" : "root",
+            "max_days_between_password_change" : 90,
+            "min_days_between_password_change" : 0,
+            "warn_days_before_password_expiration" : 7
+          },
+          "local_accounts_policy" : {
+            "max_days" : 90,
+            "min_days" : 1,
+            "warn_days" : 7
+          }
+        }
+      },
+      "inventory" : {
+        "folders" : [ ],
+        "datacenters" : [ {
+          "path" : "/sfo-w01-DC"
+        } ]
+      }
+    }
+  }
+}
