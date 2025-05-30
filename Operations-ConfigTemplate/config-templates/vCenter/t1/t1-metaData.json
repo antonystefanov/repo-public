@@ -1,0 +1,185 @@
+{
+  "selectedConfig" : {
+    "config" : {
+      "vcenter" : {
+        "authmgmt" : {
+          "vc_groups" : [ {
+            "members" : [ {
+              "name" : "string",
+              "group" : false
+            } ],
+            "principal" : "string",
+            "description" : "string"
+          } ],
+          "user_roles" : [ {
+            "name" : "string",
+            "privileges" : [ "string" ],
+            "description" : "string"
+          } ],
+          "permissions" : [ {
+            "key" : {
+              "path" : "string",
+              "principal_name" : "string",
+              "principal_type" : "string"
+            },
+            "role" : "string",
+            "propagate" : false
+          } ],
+          "token_policy" : {
+            "hok_refresh" : 0,
+            "token_renewal" : 0,
+            "bearer_refresh" : 0,
+            "clock_tolerance" : 0,
+            "token_delegation" : 0
+          },
+          "lockout_policy" : {
+            "unlock_time" : 0,
+            "failure_interval" : 0,
+            "failed_login_attempts" : 0
+          },
+          "password_policy" : {
+            "max_life" : 0,
+            "max_length" : 0,
+            "min_length" : 0,
+            "alpha_chars" : 0,
+            "numeric_chars" : 0,
+            "special_chars" : 0,
+            "password_reuse" : 0,
+            "lowercase_chars" : 0,
+            "uppercase_chars" : 0,
+            "adj_identical_chars" : 0
+          }
+        },
+        "appliance" : {
+          "syslog" : [ {
+            "port" : 0,
+            "hostname" : "string",
+            "protocol" : "TLS"
+          } ],
+          "network" : {
+            "proxy_configuration" : [ {
+              "port" : 0,
+              "server" : "string",
+              "enabled" : false,
+              "password" : "string",
+              "protocol" : "HTTP",
+              "username" : "string"
+            } ],
+            "firewall_rule_policies" : [ {
+              "policy" : "IGNORE",
+              "prefix" : 0,
+              "address" : "string",
+              "interface_name" : "string"
+            } ],
+            "dns_server_configuration" : {
+              "mode" : "DHCP",
+              "domains" : [ "string" ],
+              "servers" : [ "string" ]
+            }
+          },
+          "access_settings" : {
+            "ssh" : {
+              "enabled" : false
+            },
+            "dcui" : {
+              "enabled" : false
+            },
+            "console_cli" : {
+              "enabled" : false
+            }
+          },
+          "datetime_config" : {
+            "ntp" : {
+              "servers" : [ "string" ]
+            },
+            "time_sync" : {
+              "mode" : "DISABLED"
+            },
+            "time_zone" : {
+              "name" : "string"
+            }
+          },
+          "backup_schedules" : [ {
+            "parts" : [ "string" ],
+            "enable" : false,
+            "location" : "string",
+            "schedule_id" : "string",
+            "location_user" : "string",
+            "retention_info" : {
+              "max_count" : 0
+            },
+            "backup_password" : "string",
+            "recurrence_info" : {
+              "days" : [ "MONDAY" ],
+              "hour" : 0,
+              "minute" : 0
+            },
+            "location_password" : "string"
+          } ],
+          "user_account_settings" : {
+            "root_account_policy" : {
+              "email" : "string",
+              "roles" : [ "string" ],
+              "enabled" : false,
+              "fullname" : "string",
+              "max_days_between_password_change" : 0,
+              "min_days_between_password_change" : 0,
+              "warn_days_before_password_expiration" : 0
+            },
+            "local_accounts_policy" : {
+              "max_days" : 0,
+              "min_days" : 0,
+              "warn_days" : 0
+            }
+          }
+        },
+        "inventory" : {
+          "folders" : [ {
+            "path" : "string",
+            "type" : "DATACENTER"
+          } ],
+          "datacenters" : [ {
+            "path" : "string"
+          } ]
+        }
+      },
+      "vnetworking" : {
+        "network_vds" : {
+          "switches" : [ {
+            "path" : "string",
+            "config" : {
+              "mtu" : 0,
+              "uplink_port" : {
+                "name_array" : {
+                  "port_names" : [ "string" ]
+                }
+              },
+              "discovery_protocol" : {
+                "protocol_type" : "NONE",
+                "operation_type" : "LISTEN"
+              },
+              "multicast_filter_mode" : "LEGACY",
+              "network_io_control_enabled" : false,
+              "vm_vnic_network_resource_pools" : [ {
+                "name" : "string",
+                "description" : "string",
+                "reservation_quota" : 0
+              } ]
+            }
+          } ],
+          "portgroups" : [ {
+            "path" : "string",
+            "config" : {
+              "binding_type" : "STATIC",
+              "network_resource_pool_name" : "string"
+            },
+            "vds_path" : "string"
+          } ]
+        }
+      }
+    }
+  },
+  "description" : "",
+  "sourceResourceId" : "b65f1428-0ebe-4bfc-b865-b07e2027fa5b",
+  "configVersion" : "9.0.0.24755230"
+}
