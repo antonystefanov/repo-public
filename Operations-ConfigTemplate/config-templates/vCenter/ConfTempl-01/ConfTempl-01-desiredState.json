@@ -1,0 +1,97 @@
+{
+  "config" : {
+    "vnetworking" : {
+      "network_vds" : {
+        "switches" : [ {
+          "path" : "/sfo-w01-DC/network/sfo-w01-cl01-vds-01",
+          "config" : {
+            "mtu" : 9000,
+            "uplink_port" : {
+              "name_array" : {
+                "port_names" : [ "uplink2", "uplink1" ]
+              }
+            },
+            "discovery_protocol" : {
+              "protocol_type" : "LLDP",
+              "operation_type" : "BOTH"
+            },
+            "multicast_filter_mode" : "SNOOPING",
+            "network_io_control_enabled" : true,
+            "vm_vnic_network_resource_pools" : [ ]
+          }
+        } ],
+        "portgroups" : [ {
+          "path" : "/sfo-w01-DC/network/sfo-w01-cl01-vds-01-pg-mgmt",
+          "config" : {
+            "binding_type" : "EPHEMERAL",
+            "network_resource_pool_name" : ""
+          },
+          "vds_path" : "/sfo-w01-DC/network/sfo-w01-cl01-vds-01"
+        }, {
+          "path" : "/sfo-w01-DC/network/sfo-w01-cl01-vds-01-pg-vmotion",
+          "config" : {
+            "binding_type" : "STATIC",
+            "network_resource_pool_name" : ""
+          },
+          "vds_path" : "/sfo-w01-DC/network/sfo-w01-cl01-vds-01"
+        }, {
+          "path" : "/sfo-w01-DC/network/sfo-w01-cl01-vds-01-pg-vsan",
+          "config" : {
+            "binding_type" : "STATIC",
+            "network_resource_pool_name" : ""
+          },
+          "vds_path" : "/sfo-w01-DC/network/sfo-w01-cl01-vds-01"
+        }, {
+          "path" : "/sfo-w01-DC/network/sfo-w01-cl01-vds-DVUplinks-12",
+          "config" : {
+            "binding_type" : "STATIC",
+            "network_resource_pool_name" : ""
+          },
+          "vds_path" : "/sfo-w01-DC/network/sfo-w01-cl01-vds-01"
+        }, {
+          "path" : "/sfo-w01-DC/network/sfo-w01-r01-en01-fp-eth0-oiC6lgjhBS",
+          "config" : {
+            "binding_type" : "EPHEMERAL",
+            "network_resource_pool_name" : ""
+          },
+          "vds_path" : "/sfo-w01-DC/network/sfo-w01-cl01-vds-01"
+        }, {
+          "path" : "/sfo-w01-DC/network/sfo-w01-r01-en01-fp-eth1-nxjGWswCks",
+          "config" : {
+            "binding_type" : "EPHEMERAL",
+            "network_resource_pool_name" : ""
+          },
+          "vds_path" : "/sfo-w01-DC/network/sfo-w01-cl01-vds-01"
+        }, {
+          "path" : "/sfo-w01-DC/network/sfo-w01-r01-en02-fp-eth0-Uzo1EjdxtH",
+          "config" : {
+            "binding_type" : "EPHEMERAL",
+            "network_resource_pool_name" : ""
+          },
+          "vds_path" : "/sfo-w01-DC/network/sfo-w01-cl01-vds-01"
+        }, {
+          "path" : "/sfo-w01-DC/network/sfo-w01-r01-en02-fp-eth1-xWCWpryXGQ",
+          "config" : {
+            "binding_type" : "EPHEMERAL",
+            "network_resource_pool_name" : ""
+          },
+          "vds_path" : "/sfo-w01-DC/network/sfo-w01-cl01-vds-01"
+        }, {
+          "path" : "/sfo-w01-DC/network/vlan-1310",
+          "config" : {
+            "binding_type" : "STATIC",
+            "network_resource_pool_name" : ""
+          },
+          "vds_path" : "/sfo-w01-DC/network/sfo-w01-cl01-vds-01"
+        }, {
+          "path" : "/sfo-w01-DC/network/zone-1-supervisor-mgmt",
+          "config" : {
+            "binding_type" : "EPHEMERAL",
+            "network_resource_pool_name" : ""
+          },
+          "vds_path" : "/sfo-w01-DC/network/sfo-w01-cl01-vds-01"
+        } ]
+      }
+    }
+  }
+}
