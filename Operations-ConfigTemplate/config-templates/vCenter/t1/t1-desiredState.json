@@ -1,0 +1,297 @@
+{
+  "config" : {
+    "vcenter" : {
+      "authmgmt" : {
+        "vc_groups" : [ {
+          "members" : [ ],
+          "principal" : "NsxViAdministrators@vsphere.local",
+          "description" : "SSO group to manage NSX."
+        }, {
+          "members" : [ ],
+          "principal" : "NsxAuditors@vsphere.local",
+          "description" : "SSO group to view NSX configuration."
+        }, {
+          "members" : [ ],
+          "principal" : "SDDCAdmins@vsphere.local",
+          "description" : "SDDCAdmins"
+        }, {
+          "members" : [ ],
+          "principal" : "ExternalIDPUsers@vsphere.local",
+          "description" : "Well-known external IDP users' group, which registers external IDP users as guests."
+        }, {
+          "members" : [ ],
+          "principal" : "vCLSAdmin@vsphere.local",
+          "description" : "Contains privileges over vCLS entities"
+        }, {
+          "members" : [ ],
+          "principal" : "RegistryAdministrators@vsphere.local",
+          "description" : "Allows members to manage the registry."
+        } ],
+        "user_roles" : [ {
+          "name" : "VCF Services Platform",
+          "privileges" : [ "VirtualMachine.Config.AddRemoveDevice", "ContentLibrary.AddSubscription", "VirtualMachine.Inventory.Delete", "ContentLibrary.DeleteSubscription", "VApp.Suspend", "ContentLibrary.PublishLibraryItem", "VirtualMachine.Provisioning.Clone", "Datastore.UpdateVirtualMachineMetadata", "VirtualMachine.State.CreateSnapshot", "VirtualMachine.Provisioning.FileRandomAccess", "VirtualMachine.Config.Annotation", "VirtualMachine.Config.RawDevice", "Global.ManageCustomFields", "ContentLibrary.ManageRegistry", "Datastore.UpdateVirtualMachineFiles", "VirtualMachine.Config.ToggleForkParent", "VirtualMachine.Namespace.ModifyContent", "VirtualMachine.Interact.SetCDMedia", "ContentLibrary.UpdateLibrary", "Global.SetCustomField", "VirtualMachine.DataSets.DataSetEntryGet", "VirtualMachine.Provisioning.MarkAsVM", "VirtualMachine.Interact.AnswerQuestion", "VirtualMachine.Config.RemoveDisk", "VirtualMachine.Interact.TurnOffFaultTolerance", "VirtualMachine.Config.EditDevice", "VirtualMachine.Hbr.ConfigureReplication", "ContentLibrary.UpdateSubscription", "VApp.InstanceConfig", "VirtualMachine.Config.Resource", "VirtualMachine.Config.CPUCount", "VirtualMachine.Config.AddNewDisk", "VirtualMachine.Interact.Suspend", "Cns.Searchable", "VirtualMachine.State.RevertToSnapshot", "ContentLibrary.SyncLibraryItem", "VApp.ApplicationConfig", "VApp.Delete", "ContentLibrary.ManageClusterRegistryResource", "Datastore.Browse", "VirtualMachine.DataSets.DataSetUpdate", "VirtualMachine.Interact.Replay", "VApp.ExtractOvfEnvironment", "VirtualMachine.Config.Rename", "VApp.Import", "VirtualMachine.GuestOperations.ModifyAliases", "VirtualMachine.Config.ReloadFromPath", "VApp.Rename", "VirtualMachine.DataSets.DataSetEntryDelete", "ContentLibrary.DownloadSession", "VirtualMachine.Config.ResetGuestInfo", "Datastore.ConfigIOManagement", "VirtualMachine.Interact.Backup", "VirtualMachine.Provisioning.DeployTemplate", "VirtualMachine.Config.ChangeTracking", "ContentLibrary.CheckInTemplate", "VApp.AssignVApp", "VirtualMachine.Interact.DefragmentAllDisks", "VirtualMachine.State.RenameSnapshot", "VirtualMachine.Interact.Record", "VirtualMachine.Provisioning.ModifyCustSpecs", "VApp.PowerOff", "VirtualMachine.Config.DiskLease", "ContentLibrary.UpdateSubscribedLibrary", "VirtualMachine.Config.HostUSBDevice", "VirtualMachine.GuestOperations.Query", "VirtualMachine.Provisioning.CreateTemplateFromVM", "ContentLibrary.CreateSubscribedLibrary", "VApp.ResourceConfig", "ContentLibrary.EvictLibraryItem", "Host.Local.InstallAgent", "VirtualMachine.Provisioning.Customize", "VirtualMachine.Provisioning.GetVmFiles", "Host.Local.CreateVM", "VirtualMachine.Interact.SESparseMaintenance", "VirtualMachine.Provisioning.PutVmFiles", "VirtualMachine.GuestOperations.Execute", "VirtualMachine.Namespace.EventNotify", "VirtualMachine.Interact.SetFloppyMedia", "VirtualMachine.Namespace.Management", "VApp.Create", "VirtualMachine.Provisioning.DiskRandomAccess", "VirtualMachine.Inventory.Create", "VApp.PullFromUrls", "VirtualMachine.Interact.ToolsInstall", "VirtualMachine.DataSets.DataSetEntryList", "VirtualMachine.Interact.PowerOn", "VirtualMachine.Interact.DnD", "VirtualMachine.Interact.Pause", "Datastore.Config", "Datastore.Rename", "VirtualMachine.Config.AdvancedConfig", "VirtualMachine.DataSets.DataSetDelete", "ContentLibrary.TypeIntrospection", "Datastore.DeleteFile", "Datastore.Delete", "VirtualMachine.Config.ManagedBy", "VirtualMachine.Interact.PutUsbScanCodes", "ContentLibrary.UpdateLibraryItem", "Host.Local.ReconfigVM", "VirtualMachine.Config.DiskExtend", "VirtualMachine.DataSets.Export", "ContentLibrary.DeleteLocalLibrary", "VirtualMachine.Inventory.Unregister", "ContentLibrary.DeleteLibraryItem", "VirtualMachine.Config.UpgradeVirtualHardware", "ContentLibrary.GetConfiguration", "VirtualMachine.Interact.EnableSecondary", "VirtualMachine.Interact.PowerOff", "VirtualMachine.Interact.CreateScreenshot", "VirtualMachine.Interact.MakePrimary", "VirtualMachine.State.RemoveSnapshot", "VirtualMachine.DataSets.DataSetCreate", "ContentLibrary.UpdateLocalLibrary", "VirtualMachine.Provisioning.ReadCustSpecs", "ContentLibrary.AddCertToTrustStore", "VirtualMachine.Provisioning.CloneTemplate", "ContentLibrary.ManageRegistryProject", "VirtualMachine.Inventory.Register", "ContentLibrary.DeleteCertFromTrustStore", "Datastore.AllocateSpace", "Network.Assign", "VApp.Move", "VirtualMachine.Inventory.Move", "VirtualMachine.GuestOperations.Modify", "VApp.AssignVM", "VApp.PowerOn", "VirtualMachine.Interact.GuestControl", "VirtualMachine.Config.Memory", "VirtualMachine.Provisioning.PromoteDisks", "VirtualMachine.DataSets.DataSetList", "VApp.ManagedByConfig", "VirtualMachine.Config.QueryFTCompatibility", "VirtualMachine.Provisioning.MarkAsTemplate", "ContentLibrary.EvictSubscribedLibrary", "VirtualMachine.Config.QueryUnownedFiles", "Datastore.Move", "VirtualMachine.Config.SwapPlacement", "VirtualMachine.Interact.TerminateFaultTolerantVM", "VirtualMachine.Namespace.ReadContent", "ContentLibrary.MigrateLibrary", "VApp.Clone", "VirtualMachine.Namespace.Event", "VirtualMachine.Interact.SuspendToMemory", "Datastore.FileManagement", "VirtualMachine.Hbr.MonitorReplication", "VirtualMachine.Hbr.ReplicaManagement", "ContentLibrary.PublishLibrary", "ContentLibrary.SyncLibrary", "VirtualMachine.Config.MksControl", "ContentLibrary.UpdateConfiguration", "Resource.AssignVMToPool", "VApp.AssignResourcePool", "VirtualMachine.DataSets.DataSetEntrySet", "ContentLibrary.DeleteSubscribedLibrary", "VirtualMachine.Interact.DeviceConnection", "Host.Config.Settings", "VirtualMachine.Interact.CreateSecondary", "Host.Inventory.EditCluster", "StorageProfile.View", "ContentLibrary.UpdateSession", "VirtualMachine.Config.AddExistingDisk", "Host.Local.DeleteVM", "VirtualMachine.Config.Settings", "VirtualMachine.Inventory.CreateFromExisting", "VirtualMachine.Interact.DisableSecondary", "VirtualMachine.Interact.Reset", "ContentLibrary.ProbeSubscription", "VApp.Export", "ContentLibrary.ReadStorage", "VirtualMachine.Namespace.Query", "VApp.Unregister", "VirtualMachine.DataSets.DataSetGet", "ContentLibrary.AddLibraryItem", "ContentLibrary.CreateLocalLibrary", "Resource.AssignVAppToPool", "ContentLibrary.ImportStorage", "VirtualMachine.Interact.ConsoleInteract", "VirtualMachine.GuestOperations.QueryAliases", "ContentLibrary.CheckOutTemplate", "VirtualMachine.Provisioning.DiskRandomRead" ],
+          "description" : ""
+        }, {
+          "name" : "Cloud Admin Role",
+          "privileges" : [ "VApp.Suspend", "Folder.Create", "Datastore.UpdateVirtualMachineMetadata", "VirtualMachine.Provisioning.FileRandomAccess", "Folder.Move", "VirtualMachine.Config.RawDevice", "Namespaces.SelfServiceManage", "Datastore.UpdateVirtualMachineFiles", "VirtualMachine.Namespace.ModifyContent", "Global.SetCustomField", "VirtualMachine.Provisioning.MarkAsVM", "Alarm.Acknowledge", "VirtualMachine.Config.RemoveDisk", "InventoryService.Tagging.AttachTag", "Extension.Update", "Alarm.DisableActions", "VirtualMachine.Config.Resource", "InventoryService.Tagging.ModifyUsedByForCategory", "Cns.Searchable", "VApp.ApplicationConfig", "VApp.Delete", "VirtualMachine.Config.Rename", "VirtualMachine.Config.ReloadFromPath", "VApp.Rename", "ContentLibrary.DownloadSession", "Resource.HotMigrate", "VirtualMachine.Config.ResetGuestInfo", "VirtualMachine.Interact.Backup", "vService.ReconfigureDependency", "ContentLibrary.CheckInTemplate", "VApp.AssignVApp", "vSphereDataProtection.Recovery", "Namespaces.Configure", "VirtualMachine.GuestOperations.Query", "ContentLibrary.EvictLibraryItem", "VirtualMachine.Provisioning.Customize", "InventoryService.Tagging.DeleteCategory", "Folder.Delete", "VirtualMachine.GuestOperations.Execute", "VirtualMachine.Interact.SetFloppyMedia", "VApp.Create", "VirtualMachine.Provisioning.DiskRandomAccess", "VirtualMachine.Interact.ToolsInstall", "Authorization.ModifyPermissions", "Global.Health", "Global.SystemTag", "VirtualMachine.Interact.Pause", "Datastore.Config", "VirtualMachine.Config.AdvancedConfig", "ContentLibrary.TypeIntrospection", "Datastore.DeleteFile", "VirtualMachine.Config.ManagedBy", "Global.CancelTask", "VirtualMachine.Config.DiskExtend", "ContentLibrary.DeleteLocalLibrary", "VirtualMachine.Inventory.Unregister", "Alarm.Create", "VirtualMachine.Config.UpgradeVirtualHardware", "ContentLibrary.GetConfiguration", "Resource.EditPool", "ScheduledTask.Create", "CertificateManagement.Manage", "InventoryService.Tagging.ObjectAttachable", "ContentLibrary.DeleteCertFromTrustStore", "Datastore.AllocateSpace", "Network.Assign", "VirtualMachine.Inventory.Move", "VirtualMachine.GuestOperations.Modify", "VApp.AssignVM", "Alarm.Edit", "StorageProfile.Update", "VApp.PowerOn", "VirtualMachine.Config.Memory", "Alarm.Delete", "VirtualMachine.Provisioning.PromoteDisks", "VirtualMachine.Config.QueryFTCompatibility", "ContentLibrary.EvictSubscribedLibrary", "VirtualMachine.Config.QueryUnownedFiles", "VirtualMachine.Namespace.ReadContent", "VApp.Clone", "Datastore.FileManagement", "VirtualMachine.Hbr.ReplicaManagement", "VirtualMachine.Config.MksControl", "Resource.AssignVMToPool", "InventoryService.Tagging.EditTag", "ContentLibrary.DeleteSubscribedLibrary", "VirtualMachine.Interact.DeviceConnection", "StorageProfile.View", "ContentLibrary.UpdateSession", "VirtualMachine.Config.AddExistingDisk", "VirtualMachine.Inventory.CreateFromExisting", "VirtualMachine.Interact.Reset", "ComputePolicy.Manage", "VApp.Export", "VirtualMachine.Namespace.Query", "Sessions.ValidateSession", "ScheduledTask.Delete", "ContentLibrary.ImportStorage", "VirtualMachine.Interact.ConsoleInteract", "VirtualMachine.Provisioning.DiskRandomRead", "Authorization.ModifyRoles", "VirtualMachine.Config.AddRemoveDevice", "VirtualMachine.Inventory.Delete", "Resource.QueryVMotion", "VirtualMachine.Provisioning.Clone", "Host.Hbr.HbrManagement", "VirtualMachine.State.CreateSnapshot", "VirtualMachineClasses.Manage", "VirtualMachine.Config.Annotation", "Global.ManageCustomFields", "Resource.CreatePool", "VirtualMachine.Interact.SetCDMedia", "ContentLibrary.UpdateLibrary", "VirtualMachine.Interact.AnswerQuestion", "InventoryService.Tagging.ModifyUsedByForTag", "VirtualMachine.Config.EditDevice", "VirtualMachine.Hbr.ConfigureReplication", "VApp.InstanceConfig", "ScheduledTask.Run", "VirtualMachine.Config.CPUCount", "VirtualMachine.Config.AddNewDisk", "VirtualMachine.Interact.Suspend", "VirtualMachine.State.RevertToSnapshot", "ContentLibrary.SyncLibraryItem", "Datastore.Browse", "VApp.ExtractOvfEnvironment", "VApp.Import", "VirtualMachine.GuestOperations.ModifyAliases", "Trust.Manage", "Global.LogEvent", "Extension.Unregister", "ScheduledTask.Edit", "VirtualMachine.Provisioning.DeployTemplate", "VirtualMachine.Config.ChangeTracking", "VirtualMachine.Interact.DefragmentAllDisks", "VirtualMachine.State.RenameSnapshot", "HLM.Manage", "VirtualMachine.Provisioning.ModifyCustSpecs", "VApp.PowerOff", "VirtualMachine.Config.DiskLease", "ContentLibrary.UpdateSubscribedLibrary", "VirtualMachine.Config.HostUSBDevice", "VirtualMachine.Provisioning.CreateTemplateFromVM", "ContentLibrary.CreateSubscribedLibrary", "VApp.ResourceConfig", "Vsan.Cluster.ShallowRekey", "VirtualMachine.Provisioning.GetVmFiles", "VirtualMachine.Interact.SESparseMaintenance", "VirtualMachine.Provisioning.PutVmFiles", "VirtualMachine.Namespace.EventNotify", "VirtualMachine.Namespace.Management", "Resource.MovePool", "VirtualMachine.Inventory.Create", "Alarm.SetStatus", "Sessions.GlobalMessage", "VirtualMachine.Interact.PowerOn", "VirtualMachine.Interact.DnD", "Global.ServiceManagers", "VirtualMachine.Interact.PutUsbScanCodes", "ContentLibrary.UpdateLibraryItem", "vService.CreateDependency", "Global.GlobalTag", "ContentLibrary.DeleteLibraryItem", "Resource.ColdMigrate", "vService.DestroyDependency", "Resource.RenamePool", "VirtualMachine.Interact.PowerOff", "VirtualMachine.Interact.CreateScreenshot", "VirtualMachine.State.RemoveSnapshot", "InventoryService.Tagging.CreateTag", "ContentLibrary.UpdateLocalLibrary", "vService.UpdateDependency", "InventoryService.Tagging.DeleteTag", "VirtualMachine.Provisioning.ReadCustSpecs", "InventoryService.Tagging.EditCategory", "ContentLibrary.AddCertToTrustStore", "VirtualMachine.Provisioning.CloneTemplate", "VirtualMachine.Inventory.Register", "VApp.Move", "VirtualMachine.Interact.GuestControl", "InventoryService.Tagging.CreateCategory", "VApp.ManagedByConfig", "VirtualMachine.Provisioning.MarkAsTemplate", "VirtualMachine.Config.SwapPlacement", "VirtualMachine.Namespace.Event", "Resource.DeletePool", "VirtualMachine.Hbr.MonitorReplication", "ContentLibrary.SyncLibrary", "ContentLibrary.UpdateConfiguration", "VApp.AssignResourcePool", "vSphereDataProtection.Protection", "Folder.Rename", "Resource.ApplyRecommendation", "Extension.Register", "VirtualMachine.Config.Settings", "ContentLibrary.ProbeSubscription", "ContentLibrary.ReadStorage", "VApp.Unregister", "StorageViews.View", "ContentLibrary.AddLibraryItem", "ContentLibrary.CreateLocalLibrary", "Resource.AssignVAppToPool", "VirtualMachine.GuestOperations.QueryAliases", "ContentLibrary.CheckOutTemplate" ],
+          "description" : ""
+        }, {
+          "name" : "nsxt_ded9b644-3d3b-4536-9696-7f28111f8f76",
+          "privileges" : [ "VirtualMachine.Config.AddRemoveDevice", "DVPortgroup.Delete", "VirtualMachine.Inventory.Delete", "VcIntegrity.ClusterConfiguration.Modify", "Network.Delete", "Global.Settings", "Folder.Create", "VirtualMachine.Config.DiskExtend", "VcIntegrity.lifecycleSoftwareSpecification.Write", "DVPortgroup.PolicyOp", "Global.DisableMethods", "Network.Move", "DVSwitch.Modify", "Folder.Move", "VirtualMachine.Config.RawDevice", "Global.ManageCustomFields", "Alarm.Create", "ServiceAccount.ManageAccount", "VirtualMachine.Config.UpgradeVirtualHardware", "VirtualMachine.Interact.PowerOff", "Global.Licenses", "Global.SetCustomField", "DVSwitch.Vspan", "InventoryService.Tagging.ModifyUsedByForTag", "Host.Config.AutoStart", "VirtualMachine.Config.EditDevice", "InventoryService.Tagging.AttachTag", "DVSwitch.Create", "VApp.InstanceConfig", "Extension.Update", "VirtualMachine.Config.Resource", "VirtualMachine.Config.CPUCount", "VirtualMachine.State.RemoveSnapshot", "InventoryService.Tagging.CreateTag", "VcIntegrity.lifecycleSettings.Write", "Global.EnableMethods", "VirtualMachine.Config.AddNewDisk", "InventoryService.Tagging.DeleteTag", "InventoryService.Tagging.EditCategory", "InventoryService.Tagging.ObjectAttachable", "VApp.ApplicationConfig", "Host.Config.Maintenance", "Datastore.AllocateSpace", "VcIntegrity.lifecycleGeneral.Write", "Network.Assign", "VirtualMachine.Config.Rename", "VApp.Import", "DVSwitch.HostOp", "Global.LogEvent", "Extension.Unregister", "VcIntegrity.lifecycleSoftwareRemediation.Write", "EAM.Modify", "InventoryService.Tagging.CreateCategory", "VirtualMachine.Config.Memory", "DVSwitch.PolicyOp", "Network.Config", "ServiceAccount.Administer", "VApp.ResourceConfig", "Host.Local.ManageUserGroups", "DVPortgroup.ScopeOp", "DVPortgroup.Create", "EAM.Config", "VcIntegrity.ClusterConfiguration.View", "InventoryService.Tagging.DeleteCategory", "Folder.ExternalFolderManagement", "Resource.AssignVMToPool", "Folder.Delete", "EAM.View", "Host.Config.Network", "InventoryService.Tagging.EditTag", "VirtualMachine.Interact.DeviceConnection", "Host.Config.Settings", "Folder.Rename", "Host.Inventory.EditCluster", "VirtualMachine.Config.AddExistingDisk", "Extension.Register", "VirtualMachine.Config.Settings", "VirtualMachine.Inventory.Create", "VcIntegrity.lifecycleSoftwareSpecification.Read", "VcIntegrity.lifecycleHealth.Read", "VApp.PullFromUrls", "VcIntegrity.lifecycleSettings.Read", "ComputePolicy.Manage", "VApp.Export", "Sessions.ValidateSession", "Authorization.ModifyPermissions", "DVPortgroup.Modify", "DVSwitch.Move", "VirtualMachine.Interact.PowerOn", "DVSwitch.PortSetting", "VirtualMachine.Config.AdvancedConfig", "VcIntegrity.lifecycleGeneral.Read", "Authorization.ModifyRoles" ],
+          "description" : "NSX Role"
+        }, {
+          "name" : "VCF Services Platform Admin",
+          "privileges" : [ "VirtualMachine.Config.AddRemoveDevice", "ContentLibrary.AddSubscription", "VirtualMachine.Inventory.Delete", "ContentLibrary.DeleteSubscription", "VApp.Suspend", "ContentLibrary.PublishLibraryItem", "VirtualMachine.Provisioning.Clone", "Datastore.UpdateVirtualMachineMetadata", "VirtualMachine.State.CreateSnapshot", "VirtualMachine.Provisioning.FileRandomAccess", "VirtualMachine.Config.Annotation", "VirtualMachine.Config.RawDevice", "Global.ManageCustomFields", "ContentLibrary.ManageRegistry", "Datastore.UpdateVirtualMachineFiles", "VirtualMachine.Config.ToggleForkParent", "VirtualMachine.Namespace.ModifyContent", "VirtualMachine.Interact.SetCDMedia", "ContentLibrary.UpdateLibrary", "Global.SetCustomField", "VirtualMachine.DataSets.DataSetEntryGet", "VirtualMachine.Provisioning.MarkAsVM", "VirtualMachine.Interact.AnswerQuestion", "VirtualMachine.Config.RemoveDisk", "VirtualMachine.Interact.TurnOffFaultTolerance", "VirtualMachine.Config.EditDevice", "VirtualMachine.Hbr.ConfigureReplication", "ContentLibrary.UpdateSubscription", "VApp.InstanceConfig", "VirtualMachine.Config.Resource", "VirtualMachine.Config.CPUCount", "VirtualMachine.Config.AddNewDisk", "VirtualMachine.Interact.Suspend", "Cns.Searchable", "VirtualMachine.State.RevertToSnapshot", "ContentLibrary.SyncLibraryItem", "VApp.ApplicationConfig", "VApp.Delete", "ContentLibrary.ManageClusterRegistryResource", "Datastore.Browse", "VirtualMachine.DataSets.DataSetUpdate", "VirtualMachine.Interact.Replay", "VApp.ExtractOvfEnvironment", "VirtualMachine.Config.Rename", "VApp.Import", "VirtualMachine.GuestOperations.ModifyAliases", "VirtualMachine.Config.ReloadFromPath", "VApp.Rename", "VirtualMachine.DataSets.DataSetEntryDelete", "ContentLibrary.DownloadSession", "VirtualMachine.Config.ResetGuestInfo", "Datastore.ConfigIOManagement", "VirtualMachine.Interact.Backup", "VirtualMachine.Provisioning.DeployTemplate", "VirtualMachine.Config.ChangeTracking", "ContentLibrary.CheckInTemplate", "VApp.AssignVApp", "VirtualMachine.Interact.DefragmentAllDisks", "VirtualMachine.State.RenameSnapshot", "VirtualMachine.Interact.Record", "VirtualMachine.Provisioning.ModifyCustSpecs", "VApp.PowerOff", "VirtualMachine.Config.DiskLease", "ContentLibrary.UpdateSubscribedLibrary", "VirtualMachine.Config.HostUSBDevice", "VirtualMachine.GuestOperations.Query", "VirtualMachine.Provisioning.CreateTemplateFromVM", "ContentLibrary.CreateSubscribedLibrary", "VApp.ResourceConfig", "ContentLibrary.EvictLibraryItem", "Host.Local.InstallAgent", "VirtualMachine.Provisioning.Customize", "VirtualMachine.Provisioning.GetVmFiles", "Host.Local.CreateVM", "VirtualMachine.Interact.SESparseMaintenance", "VirtualMachine.Provisioning.PutVmFiles", "VirtualMachine.GuestOperations.Execute", "VirtualMachine.Namespace.EventNotify", "VirtualMachine.Interact.SetFloppyMedia", "VirtualMachine.Namespace.Management", "VApp.Create", "VirtualMachine.Provisioning.DiskRandomAccess", "VirtualMachine.Inventory.Create", "VApp.PullFromUrls", "VirtualMachine.Interact.ToolsInstall", "Authorization.ModifyPermissions", "VirtualMachine.DataSets.DataSetEntryList", "VirtualMachine.Interact.PowerOn", "VirtualMachine.Interact.DnD", "VirtualMachine.Interact.Pause", "Datastore.Config", "Datastore.Rename", "VirtualMachine.Config.AdvancedConfig", "VirtualMachine.DataSets.DataSetDelete", "ContentLibrary.TypeIntrospection", "Datastore.DeleteFile", "Datastore.Delete", "VirtualMachine.Config.ManagedBy", "VirtualMachine.Interact.PutUsbScanCodes", "ContentLibrary.UpdateLibraryItem", "Host.Local.ReconfigVM", "VirtualMachine.Config.DiskExtend", "VirtualMachine.DataSets.Export", "ContentLibrary.DeleteLocalLibrary", "VirtualMachine.Inventory.Unregister", "ContentLibrary.DeleteLibraryItem", "ServiceAccount.ManageAccount", "VirtualMachine.Config.UpgradeVirtualHardware", "ContentLibrary.GetConfiguration", "VirtualMachine.Interact.EnableSecondary", "VirtualMachine.Interact.PowerOff", "VirtualMachine.Interact.CreateScreenshot", "VirtualMachine.Interact.MakePrimary", "VirtualMachine.State.RemoveSnapshot", "VirtualMachine.DataSets.DataSetCreate", "ContentLibrary.UpdateLocalLibrary", "VirtualMachine.Provisioning.ReadCustSpecs", "ContentLibrary.AddCertToTrustStore", "VirtualMachine.Provisioning.CloneTemplate", "ContentLibrary.ManageRegistryProject", "VirtualMachine.Inventory.Register", "ContentLibrary.DeleteCertFromTrustStore", "Datastore.AllocateSpace", "Network.Assign", "VApp.Move", "VirtualMachine.Inventory.Move", "ServiceAccount.ManagePassword", "VirtualMachine.GuestOperations.Modify", "VApp.AssignVM", "VApp.PowerOn", "VirtualMachine.Interact.GuestControl", "VirtualMachine.Config.Memory", "VirtualMachine.Provisioning.PromoteDisks", "VirtualMachine.DataSets.DataSetList", "ServiceAccount.Administer", "VApp.ManagedByConfig", "VirtualMachine.Config.QueryFTCompatibility", "VirtualMachine.Provisioning.MarkAsTemplate", "ContentLibrary.EvictSubscribedLibrary", "VirtualMachine.Config.QueryUnownedFiles", "Datastore.Move", "VirtualMachine.Config.SwapPlacement", "VirtualMachine.Interact.TerminateFaultTolerantVM", "VirtualMachine.Namespace.ReadContent", "ContentLibrary.MigrateLibrary", "VApp.Clone", "VirtualMachine.Namespace.Event", "VirtualMachine.Interact.SuspendToMemory", "Datastore.FileManagement", "VirtualMachine.Hbr.MonitorReplication", "VirtualMachine.Hbr.ReplicaManagement", "ContentLibrary.PublishLibrary", "ContentLibrary.SyncLibrary", "VirtualMachine.Config.MksControl", "ContentLibrary.UpdateConfiguration", "Resource.AssignVMToPool", "VApp.AssignResourcePool", "VirtualMachine.DataSets.DataSetEntrySet", "ContentLibrary.DeleteSubscribedLibrary", "VirtualMachine.Interact.DeviceConnection", "Host.Config.Settings", "VirtualMachine.Interact.CreateSecondary", "Host.Inventory.EditCluster", "StorageProfile.View", "ContentLibrary.UpdateSession", "VirtualMachine.Config.AddExistingDisk", "Host.Local.DeleteVM", "VirtualMachine.Config.Settings", "VirtualMachine.Inventory.CreateFromExisting", "VirtualMachine.Interact.DisableSecondary", "VirtualMachine.Interact.Reset", "ContentLibrary.ProbeSubscription", "VApp.Export", "ContentLibrary.ReadStorage", "VirtualMachine.Namespace.Query", "VApp.Unregister", "VirtualMachine.DataSets.DataSetGet", "ContentLibrary.AddLibraryItem", "ContentLibrary.CreateLocalLibrary", "Resource.AssignVAppToPool", "ContentLibrary.ImportStorage", "VirtualMachine.Interact.ConsoleInteract", "VirtualMachine.GuestOperations.QueryAliases", "ContentLibrary.CheckOutTemplate", "VirtualMachine.Provisioning.DiskRandomRead", "Authorization.ModifyRoles" ],
+          "description" : ""
+        } ],
+        "permissions" : [ {
+          "key" : {
+            "path" : "GlobalAcl",
+            "principal_name" : "WorkloadStorage@vsphere.local",
+            "principal_type" : "GROUP"
+          },
+          "role" : "WorkloadStorageManagement",
+          "propagate" : true
+        }, {
+          "key" : {
+            "path" : "GlobalAcl",
+            "principal_name" : "NsxAuditors@vsphere.local",
+            "principal_type" : "GROUP"
+          },
+          "role" : "NsxAuditor",
+          "propagate" : true
+        }, {
+          "key" : {
+            "path" : "GlobalAcl",
+            "principal_name" : "NsxViAdministrators@vsphere.local",
+            "principal_type" : "GROUP"
+          },
+          "role" : "NsxViAdministrator",
+          "propagate" : true
+        }, {
+          "key" : {
+            "path" : "GlobalAcl",
+            "principal_name" : "RegistryAdministrators@vsphere.local",
+            "principal_type" : "GROUP"
+          },
+          "role" : "com.vmware.Content.Registry.Admin",
+          "propagate" : true
+        }, {
+          "key" : {
+            "path" : "/",
+            "principal_name" : "Administrator@vsphere.local",
+            "principal_type" : "USER"
+          },
+          "role" : "Admin",
+          "propagate" : true
+        }, {
+          "key" : {
+            "path" : "/",
+            "principal_name" : "SDDCAdmins@vsphere.local",
+            "principal_type" : "GROUP"
+          },
+          "role" : "Admin",
+          "propagate" : true
+        }, {
+          "key" : {
+            "path" : "/sfo-m01-dc01/vm/vCLS/vCLS-234f1c42-e902-b196-a5aa-21d4939ff974",
+            "principal_name" : "Administrators@vsphere.local",
+            "principal_type" : "GROUP"
+          },
+          "role" : "vCLSAdmin",
+          "propagate" : false
+        }, {
+          "key" : {
+            "path" : "/sfo-m01-dc01/vm/vCLS/vCLS-234f1c42-e902-b196-a5aa-21d4939ff974",
+            "principal_name" : "vCLSAdmin@vsphere.local",
+            "principal_type" : "GROUP"
+          },
+          "role" : "vCLSAdmin",
+          "propagate" : false
+        }, {
+          "key" : {
+            "path" : "/sfo-m01-dc01/vm/vCLS",
+            "principal_name" : "Administrators@vsphere.local",
+            "principal_type" : "GROUP"
+          },
+          "role" : "vCLSAdmin",
+          "propagate" : true
+        }, {
+          "key" : {
+            "path" : "/sfo-m01-dc01/vm/vCLS",
+            "principal_name" : "vCLSAdmin@vsphere.local",
+            "principal_type" : "GROUP"
+          },
+          "role" : "vCLSAdmin",
+          "propagate" : true
+        }, {
+          "key" : {
+            "path" : "/sfo-m01-dc01/vm/vCLS/vCLS-93641c42-e5eb-50d3-fed0-4fd03690c2c8",
+            "principal_name" : "Administrators@vsphere.local",
+            "principal_type" : "GROUP"
+          },
+          "role" : "vCLSAdmin",
+          "propagate" : false
+        }, {
+          "key" : {
+            "path" : "/sfo-m01-dc01/vm/vCLS/vCLS-93641c42-e5eb-50d3-fed0-4fd03690c2c8",
+            "principal_name" : "vCLSAdmin@vsphere.local",
+            "principal_type" : "GROUP"
+          },
+          "role" : "vCLSAdmin",
+          "propagate" : false
+        } ],
+        "token_policy" : {
+          "hok_refresh" : 2592000000,
+          "token_renewal" : 10,
+          "bearer_refresh" : 21600000,
+          "clock_tolerance" : 600000,
+          "token_delegation" : 10
+        },
+        "lockout_policy" : {
+          "unlock_time" : 300,
+          "failure_interval" : 180,
+          "failed_login_attempts" : 5
+        },
+        "password_policy" : {
+          "max_life" : 90,
+          "max_length" : 20,
+          "min_length" : 8,
+          "alpha_chars" : 2,
+          "numeric_chars" : 1,
+          "special_chars" : 1,
+          "password_reuse" : 5,
+          "lowercase_chars" : 1,
+          "uppercase_chars" : 1,
+          "adj_identical_chars" : 3
+        }
+      },
+      "appliance" : {
+        "network" : {
+          "proxy_configuration" : [ {
+            "port" : -1,
+            "server" : "",
+            "enabled" : false,
+            "protocol" : "HTTP"
+          }, {
+            "port" : -1,
+            "server" : "",
+            "enabled" : false,
+            "protocol" : "HTTPS"
+          }, {
+            "port" : -1,
+            "server" : "",
+            "enabled" : false,
+            "protocol" : "FTP"
+          } ],
+          "dns_server_configuration" : {
+            "mode" : "IS_STATIC",
+            "domains" : [ "sfo.rainpole.io", "rainpole.io" ],
+            "servers" : [ "10.11.10.4" ]
+          }
+        },
+        "access_settings" : {
+          "ssh" : {
+            "enabled" : true
+          },
+          "dcui" : {
+            "enabled" : true
+          },
+          "console_cli" : {
+            "enabled" : true
+          }
+        },
+        "datetime_config" : {
+          "ntp" : {
+            "servers" : [ "10.11.10.4" ]
+          },
+          "time_sync" : {
+            "mode" : "NTP"
+          },
+          "time_zone" : {
+            "name" : "Etc/UTC"
+          }
+        },
+        "user_account_settings" : {
+          "root_account_policy" : {
+            "roles" : [ "superAdmin" ],
+            "enabled" : true,
+            "fullname" : "root",
+            "max_days_between_password_change" : 90,
+            "min_days_between_password_change" : 0,
+            "warn_days_before_password_expiration" : 7
+          },
+          "local_accounts_policy" : {
+            "max_days" : 90,
+            "min_days" : 1,
+            "warn_days" : 7
+          }
+        }
+      },
+      "inventory" : {
+        "folders" : [ ],
+        "datacenters" : [ {
+          "path" : "/sfo-m01-dc01"
+        } ]
+      }
+    },
+    "vnetworking" : {
+      "network_vds" : {
+        "switches" : [ {
+          "path" : "/sfo-m01-dc01/network/sfo-m01-cl01-vds01",
+          "config" : {
+            "mtu" : 8900,
+            "uplink_port" : {
+              "name_array" : {
+                "port_names" : [ "uplink2", "uplink1" ]
+              }
+            },
+            "discovery_protocol" : {
+              "protocol_type" : "LLDP",
+              "operation_type" : "BOTH"
+            },
+            "multicast_filter_mode" : "SNOOPING",
+            "network_io_control_enabled" : true,
+            "vm_vnic_network_resource_pools" : [ ]
+          }
+        } ],
+        "portgroups" : [ {
+          "path" : "/sfo-m01-dc01/network/sfo-m01-cl01-vds-DVUplinks-21",
+          "config" : {
+            "binding_type" : "STATIC",
+            "network_resource_pool_name" : ""
+          },
+          "vds_path" : "/sfo-m01-dc01/network/sfo-m01-cl01-vds01"
+        }, {
+          "path" : "/sfo-m01-dc01/network/sfo-m01-cl01-vds01-pg-esx-mgmt",
+          "config" : {
+            "binding_type" : "EPHEMERAL",
+            "network_resource_pool_name" : ""
+          },
+          "vds_path" : "/sfo-m01-dc01/network/sfo-m01-cl01-vds01"
+        }, {
+          "path" : "/sfo-m01-dc01/network/sfo-m01-cl01-vds01-pg-vm-mgmt",
+          "config" : {
+            "binding_type" : "EPHEMERAL",
+            "network_resource_pool_name" : ""
+          },
+          "vds_path" : "/sfo-m01-dc01/network/sfo-m01-cl01-vds01"
+        }, {
+          "path" : "/sfo-m01-dc01/network/sfo-m01-cl01-vds01-pg-vmotion",
+          "config" : {
+            "binding_type" : "STATIC",
+            "network_resource_pool_name" : ""
+          },
+          "vds_path" : "/sfo-m01-dc01/network/sfo-m01-cl01-vds01"
+        }, {
+          "path" : "/sfo-m01-dc01/network/sfo-m01-cl01-vds01-pg-vsan",
+          "config" : {
+            "binding_type" : "STATIC",
+            "network_resource_pool_name" : ""
+          },
+          "vds_path" : "/sfo-m01-dc01/network/sfo-m01-cl01-vds01"
+        } ]
+      }
+    }
+  }
+}
